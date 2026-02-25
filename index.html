@@ -3,29 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TRADELEX — Global Trade Rights & Business Protection</title>
+<title>LexComm International Foundation — Global Trade Rights & Business Protection</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0A0E1A;--navy-mid:#0F1629;--navy-light:#162040;--gold:#C9A84C;--gold-light:#D4B96A;--gold-pale:#E8D49A;--gold-muted:#8C7235;--white:#F5F3EE;--cream:#EDE9DF;--text-dim:#8A9BBD;--border:rgba(201,168,76,0.22);--border-dim:rgba(138,155,189,0.13);}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Outfit',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 4rem;height:74px;background:rgba(10,14,26,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 4rem;height:74px;background:rgba(10,14,26,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
 .nav-logo{display:flex;align-items:center;gap:.9rem;text-decoration:none;}
-.nav-wordmark{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;letter-spacing:3px;color:var(--white);}
+.nav-brand{display:flex;flex-direction:column;gap:1px;}
+.nav-wordmark{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;letter-spacing:3px;color:var(--white);line-height:1;}
 .nav-wordmark span{color:var(--gold);}
-.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center;}
-.nav-links a{font-size:.74rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color .2s;}
+.nav-sub{font-size:.57rem;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;}
+.nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center;}
+.nav-links a{font-size:.7rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color .2s;}
 .nav-links a:hover{color:var(--gold);}
-.nav-cta{padding:.48rem 1.3rem;border:1px solid var(--gold) !important;color:var(--gold) !important;transition:background .2s,color .2s !important;}
+.nav-cta{padding:.45rem 1.2rem;border:1px solid var(--gold) !important;color:var(--gold) !important;transition:background .2s,color .2s !important;}
 .nav-cta:hover{background:var(--gold) !important;color:var(--navy) !important;}
-
-/* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:130px 4rem 80px;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 72% 48%,rgba(201,168,76,.07) 0%,transparent 60%),radial-gradient(ellipse 40% 55% at 18% 85%,rgba(22,32,64,.8) 0%,transparent 60%),linear-gradient(160deg,#0A0E1A 0%,#0F1629 55%,#080C18 100%);}
-.hero-grid{position:absolute;inset:0;opacity:.05;background-image:linear-gradient(rgba(201,168,76,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.6) 1px,transparent 1px);background-size:64px 64px;}
+.hero-grid{position:absolute;inset:0;opacity:.045;background-image:linear-gradient(rgba(201,168,76,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.6) 1px,transparent 1px);background-size:64px 64px;}
 .hero-orb{position:absolute;top:12%;right:6%;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.1) 0%,rgba(201,168,76,.03) 55%,transparent 70%);border:1px solid rgba(201,168,76,.12);animation:orbPulse 7s ease-in-out infinite;}
 .hero-orb::after{content:'';position:absolute;inset:40px;border-radius:50%;border:1px solid rgba(201,168,76,.07);animation:orbPulse 7s ease-in-out 2s infinite;}
 @keyframes orbPulse{0%,100%{transform:scale(1);opacity:.9;}50%{transform:scale(1.05);opacity:.55;}}
@@ -45,23 +43,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .btn-outline{padding:.9rem 2.4rem;border:1px solid var(--border);color:var(--white);font-size:.82rem;letter-spacing:1.2px;text-transform:uppercase;background:transparent;cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s;}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
-
-/* SECTIONS */
 section{padding:110px 4rem;}
 .section-label{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.9rem;}
 .section-label::before{content:'';width:26px;height:1px;background:var(--gold);}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.18;margin-bottom:1.4rem;}
 .section-title strong{color:var(--gold);font-weight:600;}
 .section-body{font-size:1rem;font-weight:300;color:var(--text-dim);line-height:1.8;max-width:560px;}
-
-/* LOGO STRIP */
 .logo-strip{padding:56px 4rem;background:var(--navy-mid);border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:5rem;flex-wrap:wrap;}
 .logo-variant{display:flex;flex-direction:column;align-items:center;gap:.9rem;}
 .logo-variant-label{font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);}
 .logo-box-dark{background:var(--navy);padding:1.8rem 2.8rem;border:1px solid var(--border);}
 .logo-box-icon{background:var(--navy);padding:1.5rem;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;}
-
-/* RAZÓN */
 .reason-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3.5rem;align-items:start;}
 .reason-text p{font-size:1rem;color:var(--text-dim);line-height:1.85;margin-bottom:1.2rem;}
 .reason-text p strong{color:var(--white);}
@@ -71,8 +63,6 @@ section{padding:110px 4rem;}
 .prob-icon{font-size:1.4rem;flex-shrink:0;margin-top:.1rem;}
 .prob-title{font-size:.88rem;font-weight:600;color:var(--white);margin-bottom:.3rem;}
 .prob-desc{font-size:.83rem;color:var(--text-dim);line-height:1.6;}
-
-/* M&V */
 .mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:3.5rem;}
 .mv-card{padding:3rem 2.8rem;position:relative;overflow:hidden;}
 .mv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),transparent);}
@@ -81,8 +71,24 @@ section{padding:110px 4rem;}
 .mv-tag{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;display:block;}
 .mv-quote{font-family:'Cormorant Garamond',serif;font-size:1.25rem;line-height:1.65;color:var(--cream);font-style:italic;margin-bottom:1.6rem;}
 .mv-body{font-size:.9rem;color:var(--text-dim);line-height:1.75;}
-
-/* OBJETIVOS */
+.valores-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3.5rem;}
+.valor-card{padding:2rem 1.6rem;background:var(--navy-mid);border:1px solid var(--border-dim);border-top:3px solid var(--gold);transition:transform .25s;}
+.valor-card:hover{transform:translateY(-5px);}
+.valor-icon{font-size:2rem;display:block;margin-bottom:1rem;}
+.valor-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-pale);margin-bottom:.7rem;}
+.valor-desc{font-size:.84rem;color:var(--text-dim);line-height:1.7;}
+.quote-band{padding:80px 4rem;background:var(--navy-light);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center;}
+.quote-band blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2.2rem);font-weight:300;font-style:italic;color:var(--cream);max-width:800px;margin:0 auto 1.2rem;line-height:1.6;}
+.quote-band cite{font-size:.75rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3.5rem;}
+.team-card{padding:2rem 1.6rem;background:var(--navy-mid);border:1px solid var(--border-dim);position:relative;overflow:hidden;transition:border-color .25s,transform .25s;text-align:center;}
+.team-card:hover{border-color:var(--gold);transform:translateY(-4px);}
+.team-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--navy-light),var(--navy));border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.4rem;}
+.team-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--white);margin-bottom:.3rem;font-weight:600;}
+.team-role{font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem;}
+.team-desc{font-size:.8rem;color:var(--text-dim);line-height:1.6;}
+.team-founder{border-color:var(--gold);border-width:2px;}
+.team-founder::before{content:'FUNDADOR';position:absolute;top:.8rem;right:.8rem;font-size:.55rem;letter-spacing:2px;background:var(--gold);color:var(--navy);padding:.2rem .5rem;font-weight:700;}
 .obj-general{margin-top:2.5rem;padding:2rem 2.5rem;background:var(--navy-mid);border:1px solid var(--border);border-top:3px solid var(--gold);margin-bottom:3rem;}
 .obj-general-label{font-size:.65rem;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:.8rem;}
 .obj-general-text{font-size:1rem;color:var(--cream);line-height:1.8;font-style:italic;}
@@ -93,8 +99,6 @@ section{padding:110px 4rem;}
 .obj-icon{font-size:1.5rem;margin-bottom:.9rem;display:block;}
 .obj-title{font-size:.9rem;font-weight:600;color:var(--white);margin-bottom:.6rem;}
 .obj-desc{font-size:.83rem;color:var(--text-dim);line-height:1.65;}
-
-/* FUNCIONAMIENTO */
 .func-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:3.5rem;}
 .func-card{padding:2.5rem 2rem;background:var(--navy);position:relative;overflow:hidden;border-bottom:3px solid transparent;transition:border-color .3s;}
 .func-card:hover{border-bottom-color:var(--gold);}
@@ -103,8 +107,18 @@ section{padding:110px 4rem;}
 .func-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold-pale);margin-bottom:1rem;}
 .func-body{font-size:.88rem;color:var(--text-dim);line-height:1.75;}
 .func-tag{display:inline-block;margin-top:1.2rem;font-size:.63rem;letter-spacing:2px;color:var(--gold);text-transform:uppercase;border-bottom:1px solid var(--border);padding-bottom:.2rem;}
-
-/* ESTRUCTURA */
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.area-card{padding:1.8rem 1.6rem;background:var(--navy);border:1px solid var(--border-dim);transition:border-color .25s,transform .25s;}
+.area-card:hover{border-color:var(--gold);transform:translateY(-4px);}
+.area-icon{font-size:1.8rem;margin-bottom:.9rem;display:block;}
+.area-title{font-size:.92rem;font-weight:600;color:var(--white);margin-bottom:.6rem;}
+.area-desc{font-size:.83rem;color:var(--text-dim);line-height:1.65;}
+.area-tag{display:inline-block;margin-top:1rem;font-size:.62rem;letter-spacing:2px;color:var(--gold);text-transform:uppercase;}
+.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem;}
+.impact-card{padding:2.2rem 1.6rem;background:var(--navy-mid);border:1px solid var(--border-dim);text-align:center;transition:border-color .25s;}
+.impact-card:hover{border-color:var(--gold);}
+.impact-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--gold);display:block;line-height:1;margin-bottom:.4rem;}
+.impact-lbl{font-size:.78rem;color:var(--text-dim);letter-spacing:.5px;line-height:1.5;}
 .struct-inner{margin-top:3.5rem;display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start;}
 .struct-chart{display:flex;flex-direction:column;align-items:center;}
 .s-node{padding:.85rem 1.8rem;text-align:center;font-size:.82rem;font-weight:500;letter-spacing:.5px;width:100%;max-width:300px;}
@@ -118,8 +132,6 @@ section{padding:110px 4rem;}
 .info-row{display:flex;gap:1.2rem;align-items:flex-start;padding:1.2rem 1.4rem;background:var(--navy-mid);border:1px solid var(--border-dim);border-left:3px solid var(--gold);}
 .info-label{font-size:.72rem;font-weight:600;color:var(--gold);letter-spacing:1px;text-transform:uppercase;min-width:140px;flex-shrink:0;padding-top:.1rem;}
 .info-val{font-size:.87rem;color:var(--text-dim);line-height:1.6;}
-
-/* FINANCIAMIENTO */
 .fin-badge{display:inline-flex;align-items:flex-start;gap:.7rem;padding:.9rem 1.5rem;margin-bottom:3rem;background:rgba(201,168,76,.06);border:1px solid var(--border);font-size:.85rem;color:var(--cream);line-height:1.6;}
 .fin-badge strong{color:var(--gold);}
 .fin-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;margin-bottom:2.5rem;}
@@ -133,20 +145,19 @@ section{padding:110px 4rem;}
 .fin-rule{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem 1.4rem;background:var(--navy);border:1px solid var(--border-dim);}
 .fin-rule-dot{color:var(--gold);font-size:.9rem;flex-shrink:0;margin-top:.1rem;}
 .fin-rule-text{font-size:.85rem;color:var(--text-dim);line-height:1.6;}
-
-/* CONTACTO */
 .contact-section{padding:110px 4rem;background:var(--navy-light);border-top:1px solid var(--border);}
 .contact-inner{text-align:center;max-width:580px;margin:0 auto;}
 .contact-form{display:flex;flex-direction:column;gap:1rem;max-width:420px;margin:2.5rem auto 0;}
-.contact-form input,.contact-form textarea{padding:1rem 1.4rem;background:var(--navy-mid);border:1px solid var(--border);color:var(--white);font-family:'Outfit',sans-serif;font-size:.9rem;outline:none;width:100%;transition:border-color .2s;}
-.contact-form input:focus,.contact-form textarea:focus{border-color:var(--gold);}
+.contact-form input,.contact-form textarea,.contact-form select{padding:1rem 1.4rem;background:var(--navy-mid);border:1px solid var(--border);color:var(--white);font-family:'Outfit',sans-serif;font-size:.9rem;outline:none;width:100%;transition:border-color .2s;}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:var(--gold);}
+.contact-form select option{background:var(--navy-mid);}
 .contact-form textarea{resize:vertical;}
-.contact-info{margin-top:3rem;display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;}
+.contact-info{margin-top:3rem;display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;}
 .c-info-block{text-align:center;}
 .c-info-label{font-size:.68rem;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:.4rem;}
 .c-info-val{font-size:.85rem;color:var(--text-dim);}
-
-/* FOOTER */
+.c-info-val a{color:var(--gold-light);text-decoration:none;}
+.c-info-val a:hover{text-decoration:underline;}
 footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
 .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
 .footer-desc{font-size:.85rem;color:var(--text-dim);line-height:1.7;max-width:280px;margin:1rem 0 1.5rem;}
@@ -158,21 +169,16 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
 .footer-bottom{border-top:1px solid var(--border-dim);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
 .footer-copy{font-size:.77rem;color:var(--text-dim);}
 .footer-copy span{color:var(--gold);}
-
-/* REVEAL */
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
-
 @media(max-width:900px){
-  nav{padding:0 1.5rem;}
-  .nav-links{display:none;}
-  section{padding:70px 1.5rem;}
-  .hero{padding:110px 1.5rem 60px;}
-  .reason-grid,.mv-grid,.func-grid,.struct-inner,.obj-grid,.footer-inner{grid-template-columns:1fr;}
-  .fin-grid{grid-template-columns:repeat(2,1fr);}
-  .fin-rules{grid-template-columns:1fr;}
-  .logo-strip{padding:36px 1.5rem;gap:2rem;}
-  .s-branches{max-width:100%;}
+  nav{padding:0 1.5rem;}.nav-links{display:none;}
+  section{padding:70px 1.5rem;}.hero{padding:110px 1.5rem 60px;}
+  .reason-grid,.mv-grid,.func-grid,.struct-inner,.obj-grid,.footer-inner,.team-grid,.valores-grid,.areas-grid{grid-template-columns:1fr;}
+  .fin-grid{grid-template-columns:repeat(2,1fr);}.fin-rules{grid-template-columns:1fr;}
+  .impact-grid{grid-template-columns:repeat(2,1fr);}
+  .logo-strip{padding:36px 1.5rem;gap:2rem;}.s-branches{max-width:100%;}
+  .quote-band{padding:60px 1.5rem;}
 }
 </style>
 </head>
@@ -181,20 +187,13 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
 <!-- NAV -->
 <nav>
   <a href="#inicio" class="nav-logo">
-    <svg viewBox="0 0 80 80" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#E8D49A"/>
-          <stop offset="50%" style="stop-color:#C9A84C"/>
-          <stop offset="100%" style="stop-color:#8C7235"/>
-        </linearGradient>
-      </defs>
+    <svg viewBox="0 0 80 80" width="34" height="34" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E8D49A"/><stop offset="50%" style="stop-color:#C9A84C"/><stop offset="100%" style="stop-color:#8C7235"/></linearGradient></defs>
       <polygon points="40,3 72,21 72,59 40,77 8,59 8,21" fill="#0F1629" stroke="url(#ng)" stroke-width="2.2"/>
       <ellipse cx="40" cy="40" rx="22" ry="22" fill="none" stroke="url(#ng)" stroke-width="1.2" opacity=".38"/>
       <ellipse cx="40" cy="40" rx="11" ry="22" fill="none" stroke="url(#ng)" stroke-width="1.2" opacity=".58"/>
       <line x1="18" y1="40" x2="62" y2="40" stroke="url(#ng)" stroke-width="1.2" opacity=".6"/>
       <line x1="40" y1="18" x2="40" y2="62" stroke="url(#ng)" stroke-width="1" opacity=".42"/>
-      <!-- scale -->
       <line x1="40" y1="29" x2="40" y2="51" stroke="url(#ng)" stroke-width="2.2"/>
       <line x1="28" y1="35" x2="52" y2="35" stroke="url(#ng)" stroke-width="2"/>
       <line x1="40" y1="35" x2="28" y2="44" stroke="url(#ng)" stroke-width="1.8"/>
@@ -203,11 +202,15 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
       <path d="M46,44 Q52,51 58,44" fill="none" stroke="url(#ng)" stroke-width="1.8"/>
       <line x1="35" y1="51" x2="45" y2="51" stroke="url(#ng)" stroke-width="2"/>
     </svg>
-    <span class="nav-wordmark"><span>TRADE</span>LEX</span>
+    <div class="nav-brand">
+      <div class="nav-wordmark"><span>LEXCOMM</span></div>
+      <div class="nav-sub">International Foundation</div>
+    </div>
   </a>
   <ul class="nav-links">
     <li><a href="#razon">Razón Social</a></li>
     <li><a href="#mision">Misión & Visión</a></li>
+    <li><a href="#equipo">Equipo</a></li>
     <li><a href="#objetivos">Objetivos</a></li>
     <li><a href="#funcionamiento">Funcionamiento</a></li>
     <li><a href="#financiamiento">Financiamiento</a></li>
@@ -217,18 +220,16 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
 
 <!-- HERO -->
 <section class="hero" id="inicio">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-orb"></div>
+  <div class="hero-bg"></div><div class="hero-grid"></div><div class="hero-orb"></div>
   <div class="hero-content">
-    <div class="hero-badge">ONG Internacional · Est. 2011 · Ginebra, Suiza</div>
+    <div class="hero-badge">Fundación Internacional · Est. 2014 · Ensenada, B.C., México</div>
     <h1 class="hero-title">Justicia <em>comercial</em><br>sin fronteras</h1>
-    <p class="hero-sub">TRADELEX protege los derechos de empresas y emprendedores en el comercio internacional, brindando orientación jurídica especializada en Derecho Internacional Privado — accesible para todos.</p>
+    <p class="hero-sub">LexComm International Foundation protege los derechos de empresas y emprendedores en el comercio internacional, brindando orientación jurídica especializada en Derecho Internacional Privado — accesible para todos, desde Ensenada para el mundo.</p>
     <div class="hero-div"></div>
     <div class="hero-stats">
       <div><div class="stat-num">60+</div><div class="stat-lbl">Países con presencia</div></div>
       <div><div class="stat-num">500+</div><div class="stat-lbl">Juristas voluntarios</div></div>
-      <div><div class="stat-num">14</div><div class="stat-lbl">Años de trayectoria</div></div>
+      <div><div class="stat-num">20+</div><div class="stat-lbl">Profesionistas en el equipo</div></div>
     </div>
     <div class="hero-actions">
       <a href="#mision" class="btn-primary">Conocer más</a>
@@ -241,25 +242,20 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
 <div class="logo-strip">
   <div class="logo-variant">
     <div class="logo-box-dark">
-      <!-- Full horizontal logo SVG -->
-      <svg viewBox="0 0 520 200" width="330" height="127" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 520 200" width="320" height="123" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E8D49A"/><stop offset="40%" style="stop-color:#C9A84C"/><stop offset="100%" style="stop-color:#8C7235"/></linearGradient>
           <linearGradient id="ls1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#F0DC9A"/><stop offset="50%" style="stop-color:#C9A84C"/><stop offset="100%" style="stop-color:#7A5F28"/></linearGradient>
           <linearGradient id="ln1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0F1629"/><stop offset="100%" style="stop-color:#0A0E1A"/></linearGradient>
-          <radialGradient id="lrg1" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:#C9A84C;stop-opacity:.14"/><stop offset="100%" style="stop-color:#C9A84C;stop-opacity:0"/></radialGradient>
           <filter id="lf1"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
         </defs>
         <rect width="520" height="200" fill="url(#ln1)"/>
         <rect x="0" y="0" width="520" height="2" fill="url(#lg1)"/>
-        <circle cx="100" cy="100" r="70" fill="url(#lrg1)"/>
         <polygon points="100,32 157,66 157,134 100,168 43,134 43,66" fill="none" stroke="url(#lg1)" stroke-width="1.5" opacity=".4"/>
         <polygon points="100,45 148,72.5 148,127.5 100,155 52,127.5 52,72.5" fill="url(#ln1)" stroke="url(#ls1)" stroke-width="1.2"/>
-        <line x1="52" y1="100" x2="148" y2="100" stroke="url(#lg1)" stroke-width=".9" opacity=".55"/>
-        <path d="M60,76 Q100,66 140,76" fill="none" stroke="url(#lg1)" stroke-width=".8" opacity=".45"/>
-        <path d="M60,124 Q100,134 140,124" fill="none" stroke="url(#lg1)" stroke-width=".8" opacity=".45"/>
         <ellipse cx="100" cy="100" rx="48" ry="48" fill="none" stroke="url(#lg1)" stroke-width=".8" opacity=".28"/>
         <ellipse cx="100" cy="100" rx="24" ry="48" fill="none" stroke="url(#lg1)" stroke-width=".9" opacity=".52"/>
+        <line x1="52" y1="100" x2="148" y2="100" stroke="url(#lg1)" stroke-width=".9" opacity=".55"/>
         <line x1="100" y1="52" x2="100" y2="148" stroke="url(#lg1)" stroke-width=".9" opacity=".55"/>
         <line x1="100" y1="84" x2="76" y2="100" stroke="url(#ls1)" stroke-width="1.6" filter="url(#lf1)"/>
         <line x1="100" y1="84" x2="124" y2="100" stroke="url(#ls1)" stroke-width="1.6" filter="url(#lf1)"/>
@@ -269,10 +265,11 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
         <path d="M116,100 Q124,108 132,100" fill="none" stroke="url(#ls1)" stroke-width="1.5" filter="url(#lf1)"/>
         <line x1="93" y1="114" x2="107" y2="114" stroke="url(#ls1)" stroke-width="1.6" filter="url(#lf1)"/>
         <circle cx="100" cy="45" r="2" fill="url(#lg1)"/><circle cx="148" cy="72.5" r="2" fill="url(#lg1)"/><circle cx="148" cy="127.5" r="2" fill="url(#lg1)"/><circle cx="100" cy="155" r="2" fill="url(#lg1)"/><circle cx="52" cy="127.5" r="2" fill="url(#lg1)"/><circle cx="52" cy="72.5" r="2" fill="url(#lg1)"/>
-        <text x="183" y="96" font-family="Georgia,'Times New Roman',serif" font-size="46" font-weight="bold" letter-spacing="5" fill="url(#lg1)" filter="url(#lf1)">TRADE<tspan fill="#F5F3EE" font-weight="300">LEX</tspan></text>
-        <line x1="183" y1="108" x2="490" y2="108" stroke="url(#lg1)" stroke-width=".8" opacity=".45"/>
-        <text x="183" y="128" font-family="'Trebuchet MS',sans-serif" font-size="10.5" letter-spacing="4" fill="#8A9BBD">GLOBAL TRADE RIGHTS &amp; BUSINESS PROTECTION</text>
-        <text x="490" y="162" font-family="Georgia,serif" font-size="9" letter-spacing="2" fill="#C9A84C" text-anchor="end" opacity=".65" font-style="italic">Est. 2011 · Geneva</text>
+        <text x="183" y="88" font-family="Georgia,'Times New Roman',serif" font-size="42" font-weight="bold" letter-spacing="4" fill="url(#lg1)" filter="url(#lf1)">LEXCOMM</text>
+        <line x1="183" y1="100" x2="490" y2="100" stroke="url(#lg1)" stroke-width=".8" opacity=".45"/>
+        <text x="183" y="118" font-family="'Trebuchet MS',sans-serif" font-size="9.5" letter-spacing="3.5" fill="#8A9BBD">INTERNATIONAL FOUNDATION</text>
+        <text x="183" y="134" font-family="'Trebuchet MS',sans-serif" font-size="8.5" letter-spacing="2.5" fill="#6A7A9A">GLOBAL TRADE RIGHTS &amp; BUSINESS PROTECTION</text>
+        <text x="490" y="160" font-family="Georgia,serif" font-size="9" letter-spacing="2" fill="#C9A84C" text-anchor="end" opacity=".65" font-style="italic">Est. 2014 · Ensenada, México</text>
       </svg>
     </div>
     <span class="logo-variant-label">Logo horizontal (principal)</span>
@@ -280,9 +277,7 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
   <div class="logo-variant">
     <div class="logo-box-icon">
       <svg viewBox="0 0 200 200" width="90" height="90" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="ig1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E8D49A"/><stop offset="50%" style="stop-color:#C9A84C"/><stop offset="100%" style="stop-color:#8C7235"/></linearGradient>
-        </defs>
+        <defs><linearGradient id="ig1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E8D49A"/><stop offset="50%" style="stop-color:#C9A84C"/><stop offset="100%" style="stop-color:#8C7235"/></linearGradient></defs>
         <circle cx="100" cy="100" r="96" fill="#0F1629"/>
         <circle cx="100" cy="100" r="94" fill="none" stroke="url(#ig1)" stroke-width="1.5" opacity=".45"/>
         <polygon points="100,18 172,59 172,141 100,182 28,141 28,59" fill="none" stroke="url(#ig1)" stroke-width="2" opacity=".65"/>
@@ -309,27 +304,16 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
   <h2 class="section-title reveal">La <strong>razón social</strong><br>que nos dio vida</h2>
   <div class="reason-grid">
     <div class="reason-text reveal">
-      <p>En 2011, un grupo de juristas y empresarios internacionales identificó una brecha crítica en el sistema de comercio mundial: <strong>millones de PYMEs operaban en el mercado internacional sin ningún respaldo jurídico</strong> ante controversias transfronterizas.</p>
-      <p>Mientras las grandes corporaciones contaban con despachos especializados en Derecho Internacional Privado, las empresas medianas y emprendedores quedaban completamente expuestos a conflictos de leyes, incumplimientos contractuales y ejecuciones fallidas de sentencias en el extranjero.</p>
-      <p>Esta <strong>asimetría estructural</strong> motivó la creación de TRADELEX: una organización que actuara como puente entre el sistema jurídico internacional y las empresas que más lo necesitan, sin importar su tamaño o país de origen.</p>
+      <p>En 2014, <strong>Henry I. Ortega</strong> y un equipo de más de 20 profesionistas en Ensenada, Baja California, identificaron una brecha crítica en el sistema de comercio mundial: <strong>millones de PYMEs operaban en el mercado internacional sin ningún respaldo jurídico</strong> ante controversias transfronterizas.</p>
+      <p>La región noroeste de México, con su intensa actividad comercial hacia Estados Unidos, Canadá y los mercados del Pacífico, era el escenario perfecto para observar cómo emprendedores y empresas medianas perdían contratos, activos y oportunidades por desconocer el Derecho Internacional Privado aplicable a sus operaciones.</p>
+      <p>Esta <strong>asimetría estructural</strong> motivó la creación de LexComm International Foundation: una organización que actuara como puente entre el sistema jurídico internacional y las empresas que más lo necesitan, sin importar su tamaño o país de origen.</p>
+      <p>Desde Ensenada, con visión global y compromiso regional, LexComm se ha expandido a más de 60 países a través de su red de juristas voluntarios certificados.</p>
     </div>
     <div class="prob-cards">
-      <div class="prob-card reveal">
-        <span class="prob-icon">⚠️</span>
-        <div><div class="prob-title">Vacío Jurídico Global</div><div class="prob-desc">Las PYMEs con operaciones transfronterizas carecían de orientación legal accesible en disputas internacionales.</div></div>
-      </div>
-      <div class="prob-card reveal">
-        <span class="prob-icon">📉</span>
-        <div><div class="prob-title">Pérdidas Millonarias</div><div class="prob-desc">Miles de empresas perdían contratos y activos por desconocer el derecho aplicable en jurisdicciones extranjeras.</div></div>
-      </div>
-      <div class="prob-card reveal">
-        <span class="prob-icon">⚖️</span>
-        <div><div class="prob-title">Asimetría de Justicia</div><div class="prob-desc">Las grandes firmas tenían despachos especializados; las pequeñas empresas quedaban completamente sin defensa.</div></div>
-      </div>
-      <div class="prob-card reveal">
-        <span class="prob-icon">🌍</span>
-        <div><div class="prob-title">Economías en Desarrollo</div><div class="prob-desc">Los marcos normativos de DIPr en países emergentes eran obsoletos e incompatibles con el comercio moderno.</div></div>
-      </div>
+      <div class="prob-card reveal"><span class="prob-icon">⚠️</span><div><div class="prob-title">Vacío Jurídico Global</div><div class="prob-desc">Las PYMEs con operaciones transfronterizas carecían de orientación legal accesible ante disputas internacionales.</div></div></div>
+      <div class="prob-card reveal"><span class="prob-icon">📉</span><div><div class="prob-title">Pérdidas Millonarias</div><div class="prob-desc">Miles de empresas perdían contratos y activos por desconocer el derecho aplicable en jurisdicciones extranjeras.</div></div></div>
+      <div class="prob-card reveal"><span class="prob-icon">⚖️</span><div><div class="prob-title">Asimetría de Justicia</div><div class="prob-desc">Las grandes firmas tenían despachos especializados; las PYMEs quedaban completamente sin defensa jurídica.</div></div></div>
+      <div class="prob-card reveal"><span class="prob-icon">🌍</span><div><div class="prob-title">Economías en Desarrollo</div><div class="prob-desc">Los marcos normativos de DIPr en países emergentes eran obsoletos e incompatibles con el comercio moderno.</div></div></div>
     </div>
   </div>
 </section>
@@ -341,13 +325,89 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
   <div class="mv-grid">
     <div class="mv-card mv-card-mission reveal">
       <span class="mv-tag">🎯 &nbsp; Misión</span>
-      <p class="mv-quote">"Proteger los derechos comerciales de empresas y emprendedores en el ámbito internacional, con acceso real e igualitario a la justicia."</p>
-      <p class="mv-body">Brindamos asesoría jurídica especializada en Derecho Internacional Privado, facilitamos la resolución de controversias transfronterizas y promovemos un entorno regulatorio equitativo y accesible a nivel global. Nuestra prioridad son las PYMEs y los mercados emergentes que más lo necesitan.</p>
+      <p class="mv-quote">"Proteger los derechos comerciales de empresas y emprendedores en el ámbito internacional, garantizando acceso real e igualitario a la justicia."</p>
+      <p class="mv-body">Brindamos asesoría jurídica especializada en Derecho Internacional Privado, facilitamos la resolución de controversias transfronterizas y promovemos un entorno regulatorio equitativo a nivel global. Nuestra prioridad son las PYMEs, los emprendedores y los mercados emergentes — especialmente en América Latina y el Pacífico mexicano.</p>
     </div>
     <div class="mv-card mv-card-vision reveal">
       <span class="mv-tag">🔭 &nbsp; Visión</span>
-      <p class="mv-quote">"Ser para 2040 la ONG líder mundial en defensa de los derechos comerciales internacionales, reconocida por la OMC, UNCITRAL y la CCI."</p>
-      <p class="mv-body">Aspiramos a una presencia activa en más de 80 países con una red de más de 1,000 juristas voluntarios certificados. Buscamos asesorar más de 50,000 empresas al año y ser el estándar global en justicia comercial accesible e igualitaria.</p>
+      <p class="mv-quote">"Ser para 2040 la fundación referente en defensa de derechos comerciales internacionales, reconocida por la OMC, UNCITRAL y la CCI."</p>
+      <p class="mv-body">Aspiramos a una presencia activa en más de 80 países con una red de más de 1,000 juristas voluntarios certificados. Buscamos asesorar más de 50,000 empresas al año y consolidar a Ensenada, B.C. como un hub latinoamericano de justicia comercial internacional.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALORES -->
+<section style="background:var(--navy);" id="valores">
+  <div class="section-label reveal">Principios</div>
+  <h2 class="section-title reveal">Nuestros <strong>Valores</strong></h2>
+  <p class="section-body reveal">Los cuatro pilares que guían cada decisión, cada asesoría y cada acción de LexComm International Foundation.</p>
+  <div class="valores-grid">
+    <div class="valor-card reveal"><span class="valor-icon">⚖️</span><div class="valor-title">Justicia Accesible</div><p class="valor-desc">Creemos que el acceso a la justicia comercial internacional no debe estar reservado a grandes corporaciones. Toda empresa, sin importar su tamaño o país de origen, merece orientación jurídica de calidad.</p></div>
+    <div class="valor-card reveal"><span class="valor-icon">🔍</span><div class="valor-title">Transparencia Total</div><p class="valor-desc">Publicamos todos nuestros informes financieros, casos atendidos y resultados de manera abierta. La confianza de clientes y donantes se sustenta en la rendición de cuentas absoluta.</p></div>
+    <div class="valor-card reveal"><span class="valor-icon">🌐</span><div class="valor-title">Visión Global</div><p class="valor-desc">Pensamos en clave internacional. Nuestras soluciones consideran múltiples jurisdicciones, culturas jurídicas y sistemas normativos para ofrecer asesoría verdaderamente transfronteriza.</p></div>
+    <div class="valor-card reveal"><span class="valor-icon">🤝</span><div class="valor-title">Compromiso Social</div><p class="valor-desc">Como fundación nacida en Baja California, tenemos un compromiso especial con las comunidades empresariales de América Latina y los mercados emergentes del Pacífico.</p></div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<div class="quote-band reveal">
+  <blockquote>"El comercio internacional sin justicia no es libre comercio — es desigualdad global."</blockquote>
+  <cite>Henry I. Ortega · Fundador y Director General, LexComm International Foundation</cite>
+</div>
+
+<!-- EQUIPO -->
+<section style="background:var(--navy-mid);" id="equipo">
+  <div class="section-label reveal">Las personas detrás</div>
+  <h2 class="section-title reveal">Nuestro <strong>Equipo</strong></h2>
+  <p class="section-body reveal">Un equipo de 20+ profesionistas con formación en derecho internacional, comercio exterior, relaciones internacionales y tecnología — unidos por la misión de democratizar la justicia comercial desde Ensenada, B.C.</p>
+  <div class="team-grid">
+    <div class="team-card team-founder reveal">
+      <div class="team-avatar">👨‍⚖️</div>
+      <div class="team-name">Henry I. Ortega</div>
+      <div class="team-role">Director General & Fundador</div>
+      <p class="team-desc">Especialista en Derecho Internacional Privado y Comercio Exterior. Fundó LexComm en 2014 con la visión de democratizar el acceso a la justicia comercial desde Ensenada, B.C.</p>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-avatar">👩‍💼</div>
+      <div class="team-name">Dirección Jurídica</div>
+      <div class="team-role">Área Legal Internacional</div>
+      <p class="team-desc">6 abogados especializados en DIPr, arbitraje internacional, Convención de Viena y resolución de controversias transfronterizas en múltiples jurisdicciones.</p>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-avatar">📊</div>
+      <div class="team-name">Operaciones y Finanzas</div>
+      <div class="team-role">Administración & Transparencia</div>
+      <p class="team-desc">Responsables de la gestión presupuestal, auditorías externas e informes de transparencia trimestrales que garantizan la confianza institucional.</p>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-avatar">🎓</div>
+      <div class="team-name">Capacitación & Investigación</div>
+      <div class="team-role">Programas Académicos</div>
+      <p class="team-desc">Diseñan y coordinan talleres, diplomados y el Informe Anual IGDIPAC. Mantienen alianzas activas con UABC, UNAM, LSE y Sorbonne.</p>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-avatar">🌐</div>
+      <div class="team-name">Relaciones Internacionales</div>
+      <div class="team-role">Redes & Alianzas Globales</div>
+      <p class="team-desc">Gestionan la red de 500+ juristas voluntarios en 60+ países, convenios con organismos internacionales y representación ante CEPAL y organismos ONU.</p>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-avatar">💻</div>
+      <div class="team-name">Tecnología & Plataformas</div>
+      <div class="team-role">Innovación Digital</div>
+      <p class="team-desc">Desarrollo y mantenimiento de la plataforma digital CAJI para consultas en línea, bases de datos de jurisprudencia y herramientas de mediación virtual.</p>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-avatar">📢</div>
+      <div class="team-name">Comunicación & Difusión</div>
+      <div class="team-role">Prensa & Relaciones Públicas</div>
+      <p class="team-desc">Gestionan la presencia institucional, difunden casos de éxito y coordinan comunicación con medios internacionales, universidades y organismos gubernamentales.</p>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-avatar">🏛️</div>
+      <div class="team-name">Consejo Asesor Externo</div>
+      <div class="team-role">Expertos Independientes</div>
+      <p class="team-desc">Panel de 5 juristas y académicos internacionales de reconocida trayectoria que orientan la estrategia de la fundación y validan la calidad de nuestras asesorías.</p>
     </div>
   </div>
 </section>
@@ -358,15 +418,15 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
   <h2 class="section-title reveal">Nuestros <strong>Objetivos</strong></h2>
   <div class="obj-general reveal">
     <div class="obj-general-label">Objetivo General</div>
-    <p class="obj-general-text">Garantizar el acceso igualitario de empresas al sistema jurídico internacional, promoviendo el cumplimiento del Derecho Internacional Privado y la resolución eficaz de controversias comerciales transfronterizas, reduciendo la brecha entre grandes corporaciones y PYMEs en el acceso a la justicia.</p>
+    <p class="obj-general-text">Garantizar el acceso igualitario de empresas y emprendedores al sistema jurídico internacional, promoviendo el cumplimiento del Derecho Internacional Privado y la resolución eficaz de controversias comerciales transfronterizas — reduciendo la brecha entre grandes corporaciones y PYMEs, con especial atención a México, América Latina y mercados emergentes.</p>
   </div>
   <div class="obj-grid">
-    <div class="obj-card reveal"><span class="obj-num">01</span><span class="obj-icon">⚖️</span><div class="obj-title">Asesoría Legal Gratuita</div><p class="obj-desc">Orientación jurídica sin costo a PYMEs en contratos, arbitraje y disputas comerciales internacionales mediante plataforma digital y presencial.</p></div>
-    <div class="obj-card reveal"><span class="obj-num">02</span><span class="obj-icon">🎓</span><div class="obj-title">Capacitación Empresarial</div><p class="obj-desc">Talleres y diplomados sobre tratados clave: Convención de Viena, Principios UNIDROIT y Convención de La Haya sobre reconocimiento de sentencias.</p></div>
-    <div class="obj-card reveal"><span class="obj-num">03</span><span class="obj-icon">🌐</span><div class="obj-title">Red Global de Juristas</div><p class="obj-desc">Consolidar una red de más de 500 abogados voluntarios especializados en DIPr operando en más de 60 países a nivel mundial.</p></div>
-    <div class="obj-card reveal"><span class="obj-num">04</span><span class="obj-icon">📜</span><div class="obj-title">Reforma Normativa</div><p class="obj-desc">Impulsar actualizaciones legislativas en países en desarrollo para modernizar marcos normativos del Derecho Internacional Privado.</p></div>
-    <div class="obj-card reveal"><span class="obj-num">05</span><span class="obj-icon">📊</span><div class="obj-title">Investigación y Documentación</div><p class="obj-desc">Publicar reportes anuales sobre el estado del comercio internacional, jurisprudencia comparada y aplicación de tratados internacionales.</p></div>
-    <div class="obj-card reveal"><span class="obj-num">06</span><span class="obj-icon">🤝</span><div class="obj-title">Mediación Internacional</div><p class="obj-desc">Operar como mediador neutral en conflictos entre empresas de distintas jurisdicciones, evitando costosos procesos judiciales.</p></div>
+    <div class="obj-card reveal"><span class="obj-num">01</span><span class="obj-icon">⚖️</span><div class="obj-title">Asesoría Legal Gratuita</div><p class="obj-desc">Orientación jurídica sin costo a PYMEs en contratos internacionales, arbitraje y disputas comerciales transfronterizas mediante plataforma digital y atención presencial en Ensenada, B.C.</p></div>
+    <div class="obj-card reveal"><span class="obj-num">02</span><span class="obj-icon">🎓</span><div class="obj-title">Capacitación Empresarial</div><p class="obj-desc">Talleres y diplomados sobre tratados clave: Convención de Viena, Principios UNIDROIT, Convención de La Haya y el Código de Comercio Internacional aplicado a PYMEs mexicanas.</p></div>
+    <div class="obj-card reveal"><span class="obj-num">03</span><span class="obj-icon">🌐</span><div class="obj-title">Red Global de Juristas</div><p class="obj-desc">Consolidar y expandir la red de 500+ abogados voluntarios especializados en DIPr operando activamente en más de 60 países a nivel mundial con certificación anual.</p></div>
+    <div class="obj-card reveal"><span class="obj-num">04</span><span class="obj-icon">📜</span><div class="obj-title">Reforma Normativa</div><p class="obj-desc">Impulsar actualizaciones legislativas en México y países en desarrollo para modernizar marcos normativos de DIPr y facilitar el comercio internacional de las PYMEs.</p></div>
+    <div class="obj-card reveal"><span class="obj-num">05</span><span class="obj-icon">📊</span><div class="obj-title">Investigación y Publicaciones</div><p class="obj-desc">Publicar anualmente el Informe Global IGDIPAC con análisis de jurisprudencia comparada, tratados internacionales vigentes y tendencias regulatorias del comercio mundial.</p></div>
+    <div class="obj-card reveal"><span class="obj-num">06</span><span class="obj-icon">🤝</span><div class="obj-title">Mediación Internacional</div><p class="obj-desc">Operar como mediador neutral certificado en conflictos entre empresas de distintas jurisdicciones, evitando costosos y largos procesos judiciales internacionales.</p></div>
   </div>
 </section>
 
@@ -374,29 +434,58 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
 <section style="background:var(--navy-mid);" id="funcionamiento">
   <div class="section-label reveal">Operación</div>
   <h2 class="section-title reveal">¿Cómo <strong>funcionamos</strong>?</h2>
-  <p class="section-body reveal">TRADELEX opera a través de tres pilares programáticos coordinados desde nuestra sede en Ginebra con cuatro oficinas regionales en cada continente.</p>
+  <p class="section-body reveal">LexComm International Foundation opera a través de tres pilares programáticos coordinados desde nuestra sede en Ensenada, B.C., con oficinas regionales en América, África, MENA y Asia-Pacífico.</p>
   <div class="func-grid">
     <div class="func-card reveal">
-      <span class="func-num">01</span>
-      <span class="func-icon">⚖️</span>
+      <span class="func-num">01</span><span class="func-icon">⚖️</span>
       <div class="func-title">Centro de Asesoría Jurídica Internacional</div>
-      <p class="func-body">Plataforma digital y presencial donde juristas certificados atienden consultas sobre conflictos de leyes, jurisdicción competente, reconocimiento de sentencias y contratos internacionales en español, inglés, francés y árabe. Respuesta máxima en 72 horas.</p>
-      <span class="func-tag">CAJI · Sede Ginebra</span>
+      <p class="func-body">Plataforma digital y presencial donde juristas certificados atienden consultas sobre conflictos de leyes, jurisdicción competente, reconocimiento de sentencias y contratos internacionales. Disponible en español, inglés, francés y árabe. Sede en Ensenada, B.C., con atención remota global. Respuesta máxima en 72 horas hábiles.</p>
+      <span class="func-tag">CAJI · Sede Ensenada, B.C.</span>
     </div>
     <div class="func-card reveal">
-      <span class="func-num">02</span>
-      <span class="func-icon">🎓</span>
+      <span class="func-num">02</span><span class="func-icon">🎓</span>
       <div class="func-title">Programa de Capacitación Internacional</div>
-      <p class="func-body">Talleres presenciales, webinars y diplomados gratuitos para empresarios, estudiantes y funcionarios. Módulos: arbitraje internacional, cláusulas de elección de foro, DIPr aplicado y resolución alternativa de controversias (RAC).</p>
+      <p class="func-body">Talleres presenciales, webinars y diplomados gratuitos para empresarios, estudiantes de derecho y funcionarios públicos. Módulos: arbitraje internacional, cláusulas de elección de foro, DIPr aplicado a PYMEs, Convención de Viena y RAC. Coordinado con UABC, UNAM y aliados internacionales como LSE y Sorbonne.</p>
       <span class="func-tag">PCI · Global</span>
     </div>
     <div class="func-card reveal">
-      <span class="func-num">03</span>
-      <span class="func-icon">📚</span>
+      <span class="func-num">03</span><span class="func-icon">📚</span>
       <div class="func-title">Centro de Documentación e Investigación</div>
-      <p class="func-body">Unidad académica que sistematiza legislación comparada, tratados internacionales y jurisprudencia global. Publica anualmente el Informe Global de DIPr Aplicado al Comercio (IGDIPAC), referencia para tribunales, universidades y organismos internacionales.</p>
+      <p class="func-body">Unidad académica que sistematiza legislación comparada, tratados internacionales y jurisprudencia global. Publica anualmente el Informe IGDIPAC, referencia para tribunales y organismos internacionales. Mantiene base de datos pública con más de 2,000 resoluciones internacionales clasificadas y acceso libre para académicos.</p>
       <span class="func-tag">CDI · Publicaciones</span>
     </div>
+  </div>
+</section>
+
+<!-- ÁREAS DE PRÁCTICA -->
+<section style="background:var(--navy);" id="areas">
+  <div class="section-label reveal">Especialidades</div>
+  <h2 class="section-title reveal">Áreas de <strong>Práctica Jurídica</strong></h2>
+  <p class="section-body reveal">Las seis especialidades del Derecho Internacional Privado en las que nuestros juristas voluntarios certificados están formados y activos.</p>
+  <div class="areas-grid">
+    <div class="area-card reveal"><span class="area-icon">📋</span><div class="area-title">Contratos Internacionales</div><p class="area-desc">Redacción, revisión y litigio de contratos transfronterizos. Aplicación de la Convención de Viena (CISG) y los Principios UNIDROIT sobre contratos comerciales internacionales.</p><span class="area-tag">CISG · UNIDROIT</span></div>
+    <div class="area-card reveal"><span class="area-icon">⚖️</span><div class="area-title">Arbitraje Internacional</div><p class="area-desc">Representación en procedimientos arbitrales ante la CCI, UNCITRAL, CIADI y cámaras regionales. Cláusulas arbitrales, nombramiento de árbitros y ejecución de laudos.</p><span class="area-tag">CCI · UNCITRAL · CIADI</span></div>
+    <div class="area-card reveal"><span class="area-icon">🏛️</span><div class="area-title">Reconocimiento de Sentencias</div><p class="area-desc">Asesoría en el reconocimiento y ejecución de sentencias extranjeras conforme al Convenio de La Haya de 2019 y tratados bilaterales aplicables a cada jurisdicción.</p><span class="area-tag">Convenio de La Haya</span></div>
+    <div class="area-card reveal"><span class="area-icon">🌍</span><div class="area-title">Conflicto de Leyes</div><p class="area-desc">Determinación del derecho aplicable en contratos, responsabilidad extracontractual y relaciones jurídicas con elementos internacionales. Análisis de normas de conflicto nacionales e internacionales.</p><span class="area-tag">DIPr Aplicado</span></div>
+    <div class="area-card reveal"><span class="area-icon">🚢</span><div class="area-title">Comercio Exterior y Aduanas</div><p class="area-desc">Orientación en importación/exportación, clasificación arancelaria, reglas de origen T-MEC y disputas ante autoridades aduaneras. Especialmente enfocado en el corredor México-EE.UU.</p><span class="area-tag">T-MEC · OMC</span></div>
+    <div class="area-card reveal"><span class="area-icon">💡</span><div class="area-title">Propiedad Intelectual Internacional</div><p class="area-desc">Protección de marcas, patentes y derechos de autor en mercados extranjeros. Aplicación del Acuerdo ADPIC/TRIPS y convenios de la OMPI en transacciones comerciales internacionales.</p><span class="area-tag">ADPIC · OMPI</span></div>
+  </div>
+</section>
+
+<!-- IMPACTO -->
+<section style="background:var(--navy-mid);" id="impacto">
+  <div class="section-label reveal">Resultados</div>
+  <h2 class="section-title reveal">Nuestro <strong>Impacto</strong></h2>
+  <p class="section-body reveal">Desde 2014, LexComm ha construido una trayectoria sólida de resultados concretos que demuestran el valor de democratizar el acceso a la justicia comercial internacional.</p>
+  <div class="impact-grid">
+    <div class="impact-card reveal"><span class="impact-num">3,200+</span><span class="impact-lbl">Empresas asesoradas desde 2014</span></div>
+    <div class="impact-card reveal"><span class="impact-num">60+</span><span class="impact-lbl">Países con juristas activos en la red</span></div>
+    <div class="impact-card reveal"><span class="impact-num">500+</span><span class="impact-lbl">Juristas voluntarios certificados</span></div>
+    <div class="impact-card reveal"><span class="impact-num">$48M</span><span class="impact-lbl">USD en activos empresariales recuperados</span></div>
+    <div class="impact-card reveal"><span class="impact-num">11</span><span class="impact-lbl">Años de trayectoria ininterrumpida</span></div>
+    <div class="impact-card reveal"><span class="impact-num">420+</span><span class="impact-lbl">Casos de mediación resueltos</span></div>
+    <div class="impact-card reveal"><span class="impact-num">18</span><span class="impact-lbl">Países con reformas normativas impulsadas</span></div>
+    <div class="impact-card reveal"><span class="impact-num">96%</span><span class="impact-lbl">Índice de satisfacción de clientes</span></div>
   </div>
 </section>
 
@@ -410,7 +499,7 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
       <div class="s-conn"></div>
       <div class="s-node s-mid">Consejo Directivo (9 miembros)</div>
       <div class="s-conn"></div>
-      <div class="s-node s-low">Dirección Ejecutiva — Ginebra</div>
+      <div class="s-node s-low">Dir. Ejecutiva — Henry I. Ortega</div>
       <div class="s-branches">
         <div class="s-branch">🌎 América<br><small style="opacity:.7;">Ciudad de México</small></div>
         <div class="s-branch">🌍 África<br><small style="opacity:.7;">Nairobi</small></div>
@@ -419,13 +508,15 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
       </div>
     </div>
     <div class="info-rows reveal">
-      <div class="info-row"><span class="info-label">Registro Legal</span><span class="info-val">Art. 60 del Código Civil Suizo — Organización sin fines de lucro</span></div>
-      <div class="info-row"><span class="info-label">Sede Principal</span><span class="info-val">Ginebra, Suiza — Rue de la Paix 14, CH-1204</span></div>
-      <div class="info-row"><span class="info-label">Estatus ONU</span><span class="info-val">Organismo consultivo ante ECOSOC (Consejo Económico y Social)</span></div>
+      <div class="info-row"><span class="info-label">Nombre Legal</span><span class="info-val">LexComm International Foundation, A.C.</span></div>
+      <div class="info-row"><span class="info-label">Registro Legal</span><span class="info-val">Registro Público de la Propiedad y del Comercio, Ensenada, Baja California, México</span></div>
+      <div class="info-row"><span class="info-label">Sede Principal</span><span class="info-val">Blvd. Costero 1842, Col. Centro, Ensenada, B.C., C.P. 22800, México</span></div>
+      <div class="info-row"><span class="info-label">Estatus Internacional</span><span class="info-val">Miembro observador ante la CEPAL y vinculado con organismos del sistema ONU</span></div>
       <div class="info-row"><span class="info-label">Idiomas Oficiales</span><span class="info-val">Español · Inglés · Francés · Árabe</span></div>
-      <div class="info-row"><span class="info-label">Consejo Directivo</span><span class="info-val">9 miembros electos cada 3 años en Asamblea General ordinaria</span></div>
+      <div class="info-row"><span class="info-label">Consejo Directivo</span><span class="info-val">9 miembros electos cada 3 años en Asamblea General ordinaria anual</span></div>
+      <div class="info-row"><span class="info-label">Fundador & Director</span><span class="info-val">Henry I. Ortega — Director General desde la fundación en 2014</span></div>
+      <div class="info-row"><span class="info-label">Equipo Base</span><span class="info-val">20+ profesionistas en áreas jurídica, operativa, académica y tecnológica</span></div>
       <div class="info-row"><span class="info-label">Red de Juristas</span><span class="info-val">500+ abogados voluntarios certificados activos en 60+ países</span></div>
-      <div class="info-row"><span class="info-label">Fundación</span><span class="info-val">2011 por un consorcio de juristas y empresarios internacionales</span></div>
     </div>
   </div>
 </section>
@@ -434,23 +525,21 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
 <section style="background:var(--navy-mid);" id="financiamiento">
   <div class="section-label reveal">Sostenibilidad</div>
   <h2 class="section-title reveal">Financiamiento <strong>Transparente</strong></h2>
-  <p class="section-body reveal">Como organización sin fines de lucro, TRADELEX se financia a través de fuentes diversificadas para garantizar independencia y sostenibilidad a largo plazo.</p>
+  <p class="section-body reveal">Como fundación sin fines de lucro, LexComm International Foundation se financia a través de fuentes diversificadas para garantizar independencia y sostenibilidad a largo plazo.</p>
   <br><br>
-  <div class="fin-badge reveal">
-    <strong>✅ Sin Fines de Lucro:</strong>&nbsp; TRADELEX no distribuye utilidades. El 100% de los recursos se reinvierte en la misión institucional. El 85% del presupuesto va directamente a programas; solo el 15% a administración.
-  </div>
+  <div class="fin-badge reveal"><strong>✅ Sin Fines de Lucro:</strong>&nbsp; LexComm International Foundation no distribuye utilidades. El 100% de los recursos se reinvierte en la misión institucional. El 85% del presupuesto va directamente a programas; solo el 15% a administración.</div>
   <div class="fin-grid">
-    <div class="fin-card reveal"><span class="fin-icon">🏛️</span><span class="fin-pct">30%</span><div class="fin-title">Organismos Internacionales</div><p class="fin-desc">UNCTAD, UNIDROIT, Banco Mundial y CCI financian proyectos mediante convocatorias competitivas anuales.</p></div>
-    <div class="fin-card reveal"><span class="fin-icon">🤝</span><span class="fin-pct">25%</span><div class="fin-title">Donaciones Privadas</div><p class="fin-desc">Fundaciones Open Society, Ford Foundation y GIZ (Alemania) aportan fondos para capacitación y asesoría.</p></div>
-    <div class="fin-card reveal"><span class="fin-icon">🎓</span><span class="fin-pct">20%</span><div class="fin-title">Convenios Universitarios</div><p class="fin-desc">UNAM, Sorbonne, LSE aportan recursos a cambio de acceso a investigaciones y bases de datos.</p></div>
-    <div class="fin-card reveal"><span class="fin-icon">💼</span><span class="fin-pct">15%</span><div class="fin-title">Membresías Corporativas</div><p class="fin-desc">Empresas que apoyan la causa y acceden a servicios premium pagan una cuota anual voluntaria.</p></div>
-    <div class="fin-card reveal"><span class="fin-icon">📊</span><span class="fin-pct">10%</span><div class="fin-title">Venta de Reportes</div><p class="fin-desc">Informes jurídicos especializados y bases de datos de jurisprudencia a despachos y gobiernos.</p></div>
+    <div class="fin-card reveal"><span class="fin-icon">🏛️</span><span class="fin-pct">30%</span><div class="fin-title">Organismos Internacionales</div><p class="fin-desc">UNCTAD, UNIDROIT, Banco Mundial y CCI financian proyectos específicos mediante convocatorias competitivas anuales.</p></div>
+    <div class="fin-card reveal"><span class="fin-icon">🤝</span><span class="fin-pct">25%</span><div class="fin-title">Donaciones Privadas</div><p class="fin-desc">Fundaciones Open Society, Ford Foundation, GIZ (Alemania) y donantes individuales aportan fondos para capacitación y asesoría.</p></div>
+    <div class="fin-card reveal"><span class="fin-icon">🎓</span><span class="fin-pct">20%</span><div class="fin-title">Convenios Universitarios</div><p class="fin-desc">UABC, UNAM, Sorbonne y LSE aportan recursos a cambio de acceso prioritario a investigaciones y bases de datos jurídicas.</p></div>
+    <div class="fin-card reveal"><span class="fin-icon">💼</span><span class="fin-pct">15%</span><div class="fin-title">Membresías Corporativas</div><p class="fin-desc">Empresas que apoyan la causa y acceden a servicios premium de asesoría pagan una cuota anual voluntaria.</p></div>
+    <div class="fin-card reveal"><span class="fin-icon">📊</span><span class="fin-pct">10%</span><div class="fin-title">Venta de Reportes</div><p class="fin-desc">Informes IGDIPAC y bases de datos de jurisprudencia vendidos a despachos, gobiernos y universidades a nivel global.</p></div>
   </div>
   <div class="fin-rules">
-    <div class="fin-rule reveal"><span class="fin-rule-dot">✦</span><p class="fin-rule-text"><strong style="color:var(--white)">Independencia garantizada:</strong> ningún donante puede aportar más del 20% del presupuesto total.</p></div>
+    <div class="fin-rule reveal"><span class="fin-rule-dot">✦</span><p class="fin-rule-text"><strong style="color:var(--white)">Independencia garantizada:</strong> ningún donante puede aportar más del 20% del presupuesto total anual.</p></div>
     <div class="fin-rule reveal"><span class="fin-rule-dot">✦</span><p class="fin-rule-text"><strong style="color:var(--white)">Auditoría anual</strong> por firma externa independiente, publicada en el sitio web institucional.</p></div>
     <div class="fin-rule reveal"><span class="fin-rule-dot">✦</span><p class="fin-rule-text"><strong style="color:var(--white)">85% a programas:</strong> solo el 15% se destina a gastos administrativos y operativos.</p></div>
-    <div class="fin-rule reveal"><span class="fin-rule-dot">✦</span><p class="fin-rule-text"><strong style="color:var(--white)">Transparencia total:</strong> todos los gastos disponibles públicamente en informes trimestrales.</p></div>
+    <div class="fin-rule reveal"><span class="fin-rule-dot">✦</span><p class="fin-rule-text"><strong style="color:var(--white)">Transparencia total:</strong> todos los gastos disponibles públicamente en informes financieros trimestrales.</p></div>
   </div>
 </section>
 
@@ -459,18 +548,30 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
   <div class="contact-inner">
     <div class="section-label reveal" style="justify-content:center;">Contáctanos</div>
     <h2 class="section-title reveal" style="text-align:center;">¿Tu empresa necesita<br><strong>asesoría internacional</strong>?</h2>
-    <p style="font-size:1rem;color:var(--text-dim);line-height:1.8;margin-top:.5rem;" class="reveal">Nuestro equipo de juristas voluntarios está listo para orientarte sin costo. Escríbenos y te contactaremos en menos de 72 horas.</p>
+    <p style="font-size:1rem;color:var(--text-dim);line-height:1.8;margin-top:.5rem;" class="reveal">Nuestro equipo de juristas voluntarios está listo para orientarte sin costo. Escríbenos y te contactaremos en menos de 72 horas hábiles.</p>
     <div class="contact-form reveal">
       <input type="text" placeholder="Nombre completo">
       <input type="email" placeholder="Correo electrónico">
-      <input type="text" placeholder="País y tipo de empresa">
+      <input type="text" placeholder="Empresa y país de operación">
+      <select>
+        <option value="" disabled selected>Área de consulta</option>
+        <option>Contratos Internacionales</option>
+        <option>Arbitraje Internacional</option>
+        <option>Reconocimiento de Sentencias</option>
+        <option>Conflicto de Leyes</option>
+        <option>Comercio Exterior y Aduanas (T-MEC)</option>
+        <option>Propiedad Intelectual Internacional</option>
+        <option>Mediación Transfronteriza</option>
+        <option>Otro</option>
+      </select>
       <textarea rows="4" placeholder="Describe brevemente tu situación jurídica..."></textarea>
       <button class="btn-primary" style="border:none;cursor:pointer;width:100%;">Solicitar asesoría gratuita</button>
     </div>
     <div class="contact-info reveal">
-      <div class="c-info-block"><div class="c-info-label">Sede principal</div><div class="c-info-val">Rue de la Paix 14, Ginebra, Suiza</div></div>
-      <div class="c-info-block"><div class="c-info-label">Email</div><div class="c-info-val">info@tradelex.org</div></div>
-      <div class="c-info-block"><div class="c-info-label">Respuesta</div><div class="c-info-val">Máximo 72 horas</div></div>
+      <div class="c-info-block"><div class="c-info-label">Sede principal</div><div class="c-info-val">Blvd. Costero 1842<br>Ensenada, B.C., México</div></div>
+      <div class="c-info-block"><div class="c-info-label">Clientes & Consultas</div><div class="c-info-val"><a href="mailto:lexcomm.clientes@outlook.com">lexcomm.clientes@outlook.com</a></div></div>
+      <div class="c-info-block"><div class="c-info-label">Dirección General</div><div class="c-info-val"><a href="mailto:lexcomm.ceo@outlook.com">lexcomm.ceo@outlook.com</a></div></div>
+      <div class="c-info-block"><div class="c-info-label">Tiempo de respuesta</div><div class="c-info-val">Máximo 72 horas hábiles</div></div>
     </div>
   </div>
 </section>
@@ -479,10 +580,8 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
 <footer>
   <div class="footer-inner">
     <div>
-      <svg viewBox="0 0 240 76" width="190" height="60" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
-        <defs>
-          <linearGradient id="fg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E8D49A"/><stop offset="50%" style="stop-color:#C9A84C"/><stop offset="100%" style="stop-color:#8C7235"/></linearGradient>
-        </defs>
+      <svg viewBox="0 0 280 76" width="210" height="57" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
+        <defs><linearGradient id="fg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E8D49A"/><stop offset="50%" style="stop-color:#C9A84C"/><stop offset="100%" style="stop-color:#8C7235"/></linearGradient></defs>
         <polygon points="38,4 64,19 64,49 38,64 12,49 12,19" fill="#0F1629" stroke="url(#fg1)" stroke-width="1.8" opacity=".7"/>
         <ellipse cx="38" cy="34" rx="18" ry="18" fill="none" stroke="url(#fg1)" stroke-width=".9" opacity=".35"/>
         <ellipse cx="38" cy="34" rx="9" ry="18" fill="none" stroke="url(#fg1)" stroke-width=".9" opacity=".55"/>
@@ -495,45 +594,49 @@ footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
         <path d="M22,38 Q28,44 34,38" fill="none" stroke="url(#fg1)" stroke-width="1.6"/>
         <path d="M42,38 Q48,44 54,38" fill="none" stroke="url(#fg1)" stroke-width="1.6"/>
         <line x1="33" y1="46" x2="43" y2="46" stroke="url(#fg1)" stroke-width="1.8"/>
-        <text x="78" y="42" font-family="Georgia,serif" font-size="26" font-weight="bold" letter-spacing="3" fill="url(#fg1)">TRADE<tspan fill="#F5F3EE" font-weight="300">LEX</tspan></text>
+        <text x="78" y="36" font-family="Georgia,serif" font-size="24" font-weight="bold" letter-spacing="3" fill="url(#fg1)">LEXCOMM</text>
+        <text x="78" y="52" font-family="'Trebuchet MS',sans-serif" font-size="8" letter-spacing="2" fill="#8A9BBD">INTERNATIONAL FOUNDATION</text>
       </svg>
-      <p class="footer-desc">ONG Internacional dedicada a la protección de los derechos comerciales en el ámbito del Derecho Internacional Privado. Sin fines de lucro desde 2011.</p>
-      <span class="footer-legal">Est. 2011 · Ginebra, Suiza</span>
+      <p class="footer-desc">Fundación internacional con sede en Ensenada, Baja California, dedicada a la protección de los derechos comerciales en el Derecho Internacional Privado. Fundada en 2014 por Henry I. Ortega y un equipo de 20+ profesionistas.</p>
+      <span class="footer-legal">Est. 2014 · Ensenada, B.C., México</span>
     </div>
     <div>
       <div class="footer-col-title">Organización</div>
       <ul class="footer-links">
         <li><a href="#razon">Razón Social</a></li>
         <li><a href="#mision">Misión & Visión</a></li>
-        <li><a href="#objetivos">Objetivos</a></li>
-        <li><a href="#funcionamiento">Funcionamiento</a></li>
+        <li><a href="#valores">Valores</a></li>
+        <li><a href="#equipo">Equipo</a></li>
         <li><a href="#estructura">Estructura</a></li>
+        <li><a href="#impacto">Impacto</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-title">Servicios</div>
       <ul class="footer-links">
-        <li><a href="#contacto">Asesoría Jurídica (CAJI)</a></li>
-        <li><a href="#funcionamiento">Capacitación (PCI)</a></li>
-        <li><a href="#funcionamiento">Investigación (CDI)</a></li>
-        <li><a href="#contacto">Mediación Internacional</a></li>
-        <li><a href="#financiamiento">Transparencia</a></li>
+        <li><a href="#funcionamiento">Asesoría CAJI</a></li>
+        <li><a href="#funcionamiento">Capacitación PCI</a></li>
+        <li><a href="#funcionamiento">Investigación CDI</a></li>
+        <li><a href="#areas">Contratos Internacionales</a></li>
+        <li><a href="#areas">Arbitraje Internacional</a></li>
+        <li><a href="#contacto">Mediación</a></li>
       </ul>
     </div>
     <div>
-      <div class="footer-col-title">Oficinas Regionales</div>
+      <div class="footer-col-title">Contacto</div>
       <ul class="footer-links">
-        <li><a href="#">🏛️ Ginebra (Sede Central)</a></li>
+        <li><a href="#">🏛️ Ensenada, B.C. (Sede)</a></li>
         <li><a href="#">🌎 Ciudad de México</a></li>
         <li><a href="#">🌍 Nairobi</a></li>
         <li><a href="#">🕌 Dubái</a></li>
         <li><a href="#">🌏 Singapur</a></li>
+        <li><a href="mailto:lexcomm.clientes@outlook.com">✉️ Escribirnos</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="footer-copy">© 2025 <span>TRADELEX</span> — Global Trade Rights & Business Protection. Todos los derechos reservados.</p>
-    <p class="footer-copy">Organización sin fines de lucro · Código Civil Suizo Art. 60 · Estatus consultivo <span>ECOSOC / ONU</span></p>
+    <p class="footer-copy">© 2025 <span>LexComm International Foundation</span> — Global Trade Rights & Business Protection. Todos los derechos reservados.</p>
+    <p class="footer-copy">Fundación sin fines de lucro · Registro Público de la Propiedad B.C. · <span>Ensenada, México</span></p>
   </div>
 </footer>
 
@@ -542,23 +645,20 @@ const obs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
   });
-}, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
-
+}, { threshold: 0.07, rootMargin: '0px 0px -50px 0px' });
 document.querySelectorAll('.reveal').forEach((el, i) => {
   el.style.transitionDelay = (i % 5) * 0.07 + 's';
   obs.observe(el);
 });
-
 window.addEventListener('scroll', () => {
-  const ids = ['inicio','razon','mision','objetivos','funcionamiento','estructura','financiamiento','contacto'];
+  const ids = ['inicio','razon','mision','valores','equipo','objetivos','funcionamiento','areas','impacto','estructura','financiamiento','contacto'];
   let current = '';
   ids.forEach(id => {
     const el = document.getElementById(id);
     if (el && window.scrollY >= el.offsetTop - 100) current = id;
   });
   document.querySelectorAll('.nav-links a').forEach(a => {
-    const href = a.getAttribute('href');
-    a.style.color = href === '#' + current ? 'var(--gold)' : '';
+    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
   });
 });
 </script>
