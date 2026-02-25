@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRADELEX — Global Trade Rights & Business Protection</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A0E1A;--navy-mid:#0F1629;--navy-light:#162040;--gold:#C9A84C;--gold-light:#D4B96A;--gold-pale:#E8D49A;--gold-muted:#8C7235;--white:#F5F3EE;--cream:#EDE9DF;--text-dim:#8A9BBD;--border:rgba(201,168,76,0.22);--border-dim:rgba(138,155,189,0.13);}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 4rem;height:74px;background:rgba(10,14,26,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:.9rem;text-decoration:none;}
+.nav-wordmark{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;letter-spacing:3px;color:var(--white);}
+.nav-wordmark span{color:var(--gold);}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center;}
+.nav-links a{font-size:.74rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{padding:.48rem 1.3rem;border:1px solid var(--gold) !important;color:var(--gold) !important;transition:background .2s,color .2s !important;}
+.nav-cta:hover{background:var(--gold) !important;color:var(--navy) !important;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:130px 4rem 80px;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 72% 48%,rgba(201,168,76,.07) 0%,transparent 60%),radial-gradient(ellipse 40% 55% at 18% 85%,rgba(22,32,64,.8) 0%,transparent 60%),linear-gradient(160deg,#0A0E1A 0%,#0F1629 55%,#080C18 100%);}
+.hero-grid{position:absolute;inset:0;opacity:.05;background-image:linear-gradient(rgba(201,168,76,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.6) 1px,transparent 1px);background-size:64px 64px;}
+.hero-orb{position:absolute;top:12%;right:6%;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.1) 0%,rgba(201,168,76,.03) 55%,transparent 70%);border:1px solid rgba(201,168,76,.12);animation:orbPulse 7s ease-in-out infinite;}
+.hero-orb::after{content:'';position:absolute;inset:40px;border-radius:50%;border:1px solid rgba(201,168,76,.07);animation:orbPulse 7s ease-in-out 2s infinite;}
+@keyframes orbPulse{0%,100%{transform:scale(1);opacity:.9;}50%{transform:scale(1.05);opacity:.55;}}
+.hero-content{position:relative;max-width:700px;}
+.hero-badge{display:inline-flex;align-items:center;gap:.7rem;font-size:.7rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);border:1px solid var(--border);padding:.5rem 1.2rem;margin-bottom:2rem;animation:fadeUp .8s ease both;}
+.hero-badge::before{content:'';width:22px;height:1px;background:var(--gold);}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,6.5vw,5.8rem);font-weight:300;line-height:1.06;letter-spacing:-.5px;animation:fadeUp .8s .14s ease both;}
+.hero-title em{color:var(--gold);font-style:normal;font-weight:600;}
+.hero-sub{margin-top:1.6rem;font-size:1.05rem;font-weight:300;color:var(--text-dim);line-height:1.75;max-width:530px;animation:fadeUp .8s .28s ease both;}
+.hero-div{width:52px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin:2rem 0;animation:fadeUp .8s .38s ease both;}
+.hero-stats{display:flex;gap:3.5rem;animation:fadeUp .8s .48s ease both;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:600;color:var(--gold);line-height:1;}
+.stat-lbl{font-size:.7rem;color:var(--text-dim);letter-spacing:1px;margin-top:.3rem;}
+.hero-actions{display:flex;gap:1rem;margin-top:3rem;animation:fadeUp .8s .58s ease both;flex-wrap:wrap;}
+.btn-primary{padding:.9rem 2.4rem;background:linear-gradient(135deg,var(--gold-pale),var(--gold),var(--gold-muted));color:var(--navy);font-weight:600;font-size:.82rem;letter-spacing:1.2px;text-transform:uppercase;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:opacity .2s,transform .2s;}
+.btn-primary:hover{opacity:.85;transform:translateY(-2px);}
+.btn-outline{padding:.9rem 2.4rem;border:1px solid var(--border);color:var(--white);font-size:.82rem;letter-spacing:1.2px;text-transform:uppercase;background:transparent;cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+/* SECTIONS */
+section{padding:110px 4rem;}
+.section-label{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.9rem;}
+.section-label::before{content:'';width:26px;height:1px;background:var(--gold);}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.18;margin-bottom:1.4rem;}
+.section-title strong{color:var(--gold);font-weight:600;}
+.section-body{font-size:1rem;font-weight:300;color:var(--text-dim);line-height:1.8;max-width:560px;}
+
+/* LOGO STRIP */
+.logo-strip{padding:56px 4rem;background:var(--navy-mid);border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:5rem;flex-wrap:wrap;}
+.logo-variant{display:flex;flex-direction:column;align-items:center;gap:.9rem;}
+.logo-variant-label{font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);}
+.logo-box-dark{background:var(--navy);padding:1.8rem 2.8rem;border:1px solid var(--border);}
+.logo-box-icon{background:var(--navy);padding:1.5rem;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;}
+
+/* RAZÓN */
+.reason-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3.5rem;align-items:start;}
+.reason-text p{font-size:1rem;color:var(--text-dim);line-height:1.85;margin-bottom:1.2rem;}
+.reason-text p strong{color:var(--white);}
+.prob-cards{display:flex;flex-direction:column;gap:.9rem;}
+.prob-card{display:flex;align-items:flex-start;gap:1.2rem;padding:1.4rem 1.6rem;background:var(--navy-mid);border:1px solid var(--border-dim);border-left:3px solid var(--gold);transition:border-left-color .2s;}
+.prob-card:hover{border-left-color:var(--gold-pale);}
+.prob-icon{font-size:1.4rem;flex-shrink:0;margin-top:.1rem;}
+.prob-title{font-size:.88rem;font-weight:600;color:var(--white);margin-bottom:.3rem;}
+.prob-desc{font-size:.83rem;color:var(--text-dim);line-height:1.6;}
+
+/* M&V */
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:3.5rem;}
+.mv-card{padding:3rem 2.8rem;position:relative;overflow:hidden;}
+.mv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),transparent);}
+.mv-card-mission{background:var(--navy-light);}
+.mv-card-vision{background:var(--navy);}
+.mv-tag{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;display:block;}
+.mv-quote{font-family:'Cormorant Garamond',serif;font-size:1.25rem;line-height:1.65;color:var(--cream);font-style:italic;margin-bottom:1.6rem;}
+.mv-body{font-size:.9rem;color:var(--text-dim);line-height:1.75;}
+
+/* OBJETIVOS */
+.obj-general{margin-top:2.5rem;padding:2rem 2.5rem;background:var(--navy-mid);border:1px solid var(--border);border-top:3px solid var(--gold);margin-bottom:3rem;}
+.obj-general-label{font-size:.65rem;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:.8rem;}
+.obj-general-text{font-size:1rem;color:var(--cream);line-height:1.8;font-style:italic;}
+.obj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.obj-card{padding:1.8rem 1.6rem;background:var(--navy-mid);border:1px solid var(--border-dim);position:relative;overflow:hidden;transition:border-color .25s,transform .25s;}
+.obj-card:hover{border-color:var(--gold);transform:translateY(-4px);}
+.obj-num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:700;color:rgba(201,168,76,.1);position:absolute;top:.4rem;right:.9rem;line-height:1;}
+.obj-icon{font-size:1.5rem;margin-bottom:.9rem;display:block;}
+.obj-title{font-size:.9rem;font-weight:600;color:var(--white);margin-bottom:.6rem;}
+.obj-desc{font-size:.83rem;color:var(--text-dim);line-height:1.65;}
+
+/* FUNCIONAMIENTO */
+.func-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:3.5rem;}
+.func-card{padding:2.5rem 2rem;background:var(--navy);position:relative;overflow:hidden;border-bottom:3px solid transparent;transition:border-color .3s;}
+.func-card:hover{border-bottom-color:var(--gold);}
+.func-num{font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:700;color:rgba(201,168,76,.07);position:absolute;top:-1rem;right:1rem;line-height:1;}
+.func-icon{font-size:2rem;margin-bottom:1.2rem;display:block;}
+.func-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold-pale);margin-bottom:1rem;}
+.func-body{font-size:.88rem;color:var(--text-dim);line-height:1.75;}
+.func-tag{display:inline-block;margin-top:1.2rem;font-size:.63rem;letter-spacing:2px;color:var(--gold);text-transform:uppercase;border-bottom:1px solid var(--border);padding-bottom:.2rem;}
+
+/* ESTRUCTURA */
+.struct-inner{margin-top:3.5rem;display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start;}
+.struct-chart{display:flex;flex-direction:column;align-items:center;}
+.s-node{padding:.85rem 1.8rem;text-align:center;font-size:.82rem;font-weight:500;letter-spacing:.5px;width:100%;max-width:300px;}
+.s-top{background:linear-gradient(135deg,var(--gold),var(--gold-muted));color:var(--navy);}
+.s-mid{background:var(--navy-light);color:var(--white);border:1px solid var(--border);}
+.s-low{background:var(--navy-mid);color:var(--cream);border:1px solid var(--border-dim);}
+.s-conn{width:2px;height:26px;background:var(--border);}
+.s-branches{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;width:100%;max-width:350px;margin-top:1rem;}
+.s-branch{padding:.7rem 1rem;font-size:.74rem;background:var(--navy-mid);color:var(--text-dim);border:1px solid var(--border-dim);text-align:center;letter-spacing:.4px;}
+.info-rows{display:flex;flex-direction:column;gap:1rem;}
+.info-row{display:flex;gap:1.2rem;align-items:flex-start;padding:1.2rem 1.4rem;background:var(--navy-mid);border:1px solid var(--border-dim);border-left:3px solid var(--gold);}
+.info-label{font-size:.72rem;font-weight:600;color:var(--gold);letter-spacing:1px;text-transform:uppercase;min-width:140px;flex-shrink:0;padding-top:.1rem;}
+.info-val{font-size:.87rem;color:var(--text-dim);line-height:1.6;}
+
+/* FINANCIAMIENTO */
+.fin-badge{display:inline-flex;align-items:flex-start;gap:.7rem;padding:.9rem 1.5rem;margin-bottom:3rem;background:rgba(201,168,76,.06);border:1px solid var(--border);font-size:.85rem;color:var(--cream);line-height:1.6;}
+.fin-badge strong{color:var(--gold);}
+.fin-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;margin-bottom:2.5rem;}
+.fin-card{padding:1.8rem 1.4rem;background:var(--navy);border:1px solid var(--border-dim);text-align:center;transition:border-color .25s,transform .25s;}
+.fin-card:hover{border-color:var(--gold);transform:translateY(-4px);}
+.fin-pct{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:var(--gold);display:block;line-height:1;margin-bottom:.5rem;}
+.fin-icon{font-size:1.5rem;display:block;margin-bottom:.8rem;}
+.fin-title{font-size:.8rem;font-weight:600;color:var(--white);margin-bottom:.5rem;}
+.fin-desc{font-size:.76rem;color:var(--text-dim);line-height:1.55;}
+.fin-rules{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.fin-rule{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem 1.4rem;background:var(--navy);border:1px solid var(--border-dim);}
+.fin-rule-dot{color:var(--gold);font-size:.9rem;flex-shrink:0;margin-top:.1rem;}
+.fin-rule-text{font-size:.85rem;color:var(--text-dim);line-height:1.6;}
+
+/* CONTACTO */
+.contact-section{padding:110px 4rem;background:var(--navy-light);border-top:1px solid var(--border);}
+.contact-inner{text-align:center;max-width:580px;margin:0 auto;}
+.contact-form{display:flex;flex-direction:column;gap:1rem;max-width:420px;margin:2.5rem auto 0;}
+.contact-form input,.contact-form textarea{padding:1rem 1.4rem;background:var(--navy-mid);border:1px solid var(--border);color:var(--white);font-family:'Outfit',sans-serif;font-size:.9rem;outline:none;width:100%;transition:border-color .2s;}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--gold);}
+.contact-form textarea{resize:vertical;}
+.contact-info{margin-top:3rem;display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;}
+.c-info-block{text-align:center;}
+.c-info-label{font-size:.68rem;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:.4rem;}
+.c-info-val{font-size:.85rem;color:var(--text-dim);}
+
+/* FOOTER */
+footer{background:var(--navy);border-top:1px solid var(--border);padding:4rem;}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+.footer-desc{font-size:.85rem;color:var(--text-dim);line-height:1.7;max-width:280px;margin:1rem 0 1.5rem;}
+.footer-legal{font-size:.67rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-muted);border:1px solid rgba(201,168,76,.2);padding:.35rem .8rem;display:inline-block;}
+.footer-col-title{font-size:.67rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.7rem;}
+.footer-links a{font-size:.85rem;color:var(--text-dim);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+.footer-bottom{border-top:1px solid var(--border-dim);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-size:.77rem;color:var(--text-dim);}
+.footer-copy span{color:var(--gold);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:900px){
+  nav{padding:0 1.5rem;}
+  .nav-links{display:none;}
+  section{padding:70px 1.5rem;}
+  .hero{padding:110px 1.5rem 60px;}
+  .reason-grid,.mv-grid,.func-grid,.struct-inner,.obj-grid,.footer-inner{grid-template-columns:1fr;}
+  .fin-grid{grid-template-columns:repeat(2,1fr);}
+  .fin-rules{grid-template-columns:1fr;}
+  .logo-strip{padding:36px 1.5rem;gap:2rem;}
+  .s-branches{max-width:100%;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="nav-logo">
+    <svg viewBox="0 0 80 80" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#E8D49A"/>
+          <stop offset="50%" style="stop-color:#C9A84C"/>
+          <stop offset="100%" style="stop-color:#8C7235"/>
+        </linearGradient>
+      </defs>
+      <polygon points="40,3 72,21 72,59 40,77 8,59 8,21" fill="#0F1629" stroke="url(#ng)" stroke-width="2.2"/>
+      <ellipse cx="40" cy="40" rx="22" ry="22" fill="none" stroke="url(#ng)" stroke-width="1.2" opacity=".38"/>
+      <ellipse cx="40" cy="40" rx="11" ry="22" fill="none" stroke="url(#ng)" stroke-width="1.2" opacity=".58"/>
+      <line x1="18" y1="40" x2="62" y2="40" stroke="url(#ng)" stroke-width="1.2" opacity=".6"/>
+      <line x1="40" y1="18" x2="40" y2="62" stroke="url(#ng)" stroke-width="1" opacity=".42"/>
+      <!-- scale -->
+      <line x1="40" y1="29" x2="40" y2="51" stroke="url(#ng)" stroke-width="2.2"/>
+      <line x1="28" y1="35" x2="52" y2="35" stroke="url(#ng)" stroke-width="2"/>
+      <line x1="40" y1="35" x2="28" y2="44" stroke="url(#ng)" stroke-width="1.8"/>
+      <line x1="40" y1="35" x2="52" y2="44" stroke="url(#ng)" stroke-width="1.8"/>
+      <path d="M22,44 Q28,51 34,44" fill="none" stroke="url(#ng)" stroke-width="1.8"/>
+      <path d="M46,44 Q52,51 58,44" fill="none" stroke="url(#ng)" stroke-width="1.8"/>
+      <line x1="35" y1="51" x2="45" y2="51" stroke="url(#ng)" stroke-width="2"/>
+    </svg>
+    <span class="nav-wordmark"><span>TRADE</span>LEX</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#razon">Razón Social</a></li>
+    <li><a href="#mision">Misión & Visión</a></li>
+    <li><a href="#objetivos">Objetivos</a></li>
+    <li><a href="#funcionamiento">Funcionamiento</a></li>
+    <li><a href="#financiamiento">Financiamiento</a></li>
+    <li><a href="#contacto" class="nav-cta">Asesoría</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-orb"></div>
+  <div class="hero-content">
+    <div class="hero-badge">ONG Internacional · Est. 2011 · Ginebra, Suiza</div>
+    <h1 class="hero-title">Justicia <em>comercial</em><br>sin fronteras</h1>
+    <p class="hero-sub">TRADELEX protege los derechos de empresas y emprendedores en el comercio internacional, brindando orientación jurídica especializada en Derecho Internacional Privado — accesible para todos.</p>
+    <div class="hero-div"></div>
+    <div class="hero-stats">
+      <div><div class="stat-num">60+</div><div class="stat-lbl">Países con presencia</div></div>
+      <div><div class="stat-num">500+</div><div class="stat-lbl">Juristas voluntarios</div></div>
+      <div><div class="stat-num">14</div><div class="stat-lbl">Años de trayectoria</div></div>
+    </div>
+    <div class="hero-actions">
+      <a href="#mision" class="btn-primary">Conocer más</a>
+      <a href="#contacto" class="btn-outline">Solicitar asesoría</a>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO SHOWCASE -->
+<div class="logo-strip">
+  <div class="logo-variant">
+    <div class="logo-box-dark">
+      <!-- Full horizontal logo SVG -->
+      <svg viewBox="0 0 520 200" width="330" height="127" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E8D49A"/><stop offset="40%" style="stop-color:#C9A84C"/><stop offset="100%" style="stop-color:#8C7235"/></linearGradient>
+          <linearGradient id="ls1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#F0DC9A"/><stop offset="50%" style="stop-color:#C9A84C"/><stop offset="100%" style="stop-color:#7A5F28"/></linearGradient>
+          <linearGradient id="ln1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0F1629"/><stop offset="100%" style="stop-color:#0A0E1A"/></linearGradient>
+          <radialGradient id="lrg1" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:#C9A84C;stop-opacity:.14"/><stop offset="100%" style="stop-color:#C9A84C;stop-opacity:0"/></radialGradient>
+          <filter id="lf1"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <rect width="520" height="200" fill="url(#ln1)"/>
+        <rect x="0" y="0" width="520" height="2" fill="url(#lg1)"/>
+        <circle cx="100" cy="100" r="70" fill="url(#lrg1)"/>
+        <polygon points="100,32 157,66 157,134 100,168 43,134 43,66" fill="none" stroke="url(#lg1)" stroke-width="1.5" opacity=".4"/>
+        <polygon points="100,45 148,72.5 148,127.5 100,155 52,127.5 52,72.5" fill="url(#ln1)" stroke="url(#ls1)" stroke-width="1.2"/>
+        <line x1="52" y1="100" x2="148" y2="100" stroke="url(#lg1)" stroke-width=".9" opacity=".55"/>
+        <path d="M60,76 Q100,66 140,76" fill="none" stroke="url(#lg1)" stroke-width=".8" opacity=".45"/>
+        <path d="M60,124 Q100,134 140,124" fill="none" stroke="url(#lg1)" stroke-width=".8" opacity=".45"/>
+        <ellipse cx="100" cy="100" rx="48" ry="48" fill="none" stroke="url(#lg1)" stroke-width=".8" opacity=".28"/>
+        <ellipse cx="100" cy="100" rx="24" ry="48" fill="none" stroke="url(#lg1)" stroke-width=".9" opacity=".52"/>
+        <line x1="100" y1="52" x2="100" y2="148" stroke="url(#lg1)" stroke-width=".9" opacity=".55"/>
+        <line x1="100" y1="84" x2="76" y2="100" stroke="url(#ls1)" stroke-width="1.6" filter="url(#lf1)"/>
+        <line x1="100" y1="84" x2="124" y2="100" stroke="url(#ls1)" stroke-width="1.6" filter="url(#lf1)"/>
+        <line x1="100" y1="76" x2="100" y2="114" stroke="url(#ls1)" stroke-width="1.9" filter="url(#lf1)"/>
+        <line x1="82" y1="84" x2="118" y2="84" stroke="url(#ls1)" stroke-width="1.6" filter="url(#lf1)"/>
+        <path d="M68,100 Q76,108 84,100" fill="none" stroke="url(#ls1)" stroke-width="1.5" filter="url(#lf1)"/>
+        <path d="M116,100 Q124,108 132,100" fill="none" stroke="url(#ls1)" stroke-width="1.5" filter="url(#lf1)"/>
+        <line x1="93" y1="114" x2="107" y2="114" stroke="url(#ls1)" stroke-width="1.6" filter="url(#lf1)"/>
+        <circle cx="100" cy="45" r="2" fill="url(#lg1)"/><circle cx="148" cy="72.5" r="2" fill="url(#lg1)"/><circle cx="148" cy="127.5" r="2" fill="url(#lg1)"/><circle cx="100" cy="155" r="2" fill="url(#lg1)"/><circle cx="52" cy="127.5" r="2" fill="url(#lg1)"/><circle cx="52" cy="72.5" r="2" fill="url(#lg1)"/>
+        <text x="183" y="96" font-family="Georgia,'Times New Roman',serif" font-size="46" font-weight="bold" letter-spacing="5" fill="url(#lg1)" filter="url(#lf1)">TRADE<tspan fill="#F5F3EE" font-weight="300">LEX</tspan></text>
+        <line x1="183" y1="108" x2="490" y2="108" stroke="url(#lg1)" stroke-width=".8" opacity=".45"/>
+        <text x="183" y="128" font-family="'Trebuchet MS',sans-serif" font-size="10.5" letter-spacing="4" fill="#8A9BBD">GLOBAL TRADE RIGHTS &amp; BUSINESS PROTECTION</text>
+        <text x="490" y="162" font-family="Georgia,serif" font-size="9" letter-spacing="2" fill="#C9A84C" text-anchor="end" opacity=".65" font-style="italic">Est. 2011 · Geneva</text>
+      </svg>
+    </div>
+    <span class="logo-variant-label">Logo horizontal (principal)</span>
+  </div>
+  <div class="logo-variant">
+    <div class="logo-box-icon">
+      <svg viewBox="0 0 200 200" width="90" height="90" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="ig1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E8D49A"/><stop offset="50%" style="stop-color:#C9A84C"/><stop offset="100%" style="stop-color:#8C7235"/></linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r="96" fill="#0F1629"/>
+        <circle cx="100" cy="100" r="94" fill="none" stroke="url(#ig1)" stroke-width="1.5" opacity=".45"/>
+        <polygon points="100,18 172,59 172,141 100,182 28,141 28,59" fill="none" stroke="url(#ig1)" stroke-width="2" opacity=".65"/>
+        <ellipse cx="100" cy="100" rx="54" ry="54" fill="none" stroke="url(#ig1)" stroke-width="1.2" opacity=".32"/>
+        <ellipse cx="100" cy="100" rx="27" ry="54" fill="none" stroke="url(#ig1)" stroke-width="1.3" opacity=".58"/>
+        <line x1="46" y1="100" x2="154" y2="100" stroke="url(#ig1)" stroke-width="1.4" opacity=".58"/>
+        <line x1="100" y1="46" x2="100" y2="154" stroke="url(#ig1)" stroke-width="1.2" opacity=".42"/>
+        <line x1="100" y1="74" x2="100" y2="126" stroke="url(#ig1)" stroke-width="2.5"/>
+        <line x1="74" y1="88" x2="126" y2="88" stroke="url(#ig1)" stroke-width="2.2"/>
+        <line x1="100" y1="88" x2="74" y2="108" stroke="url(#ig1)" stroke-width="2"/>
+        <line x1="100" y1="88" x2="126" y2="108" stroke="url(#ig1)" stroke-width="2"/>
+        <path d="M62,108 Q74,122 86,108" fill="none" stroke="url(#ig1)" stroke-width="2"/>
+        <path d="M114,108 Q126,122 138,108" fill="none" stroke="url(#ig1)" stroke-width="2"/>
+        <line x1="90" y1="126" x2="110" y2="126" stroke="url(#ig1)" stroke-width="2.2"/>
+      </svg>
+    </div>
+    <span class="logo-variant-label">Ícono / app / sello</span>
+  </div>
+</div>
+
+<!-- RAZÓN SOCIAL -->
+<section style="background:var(--navy);" id="razon">
+  <div class="section-label reveal">¿Por qué fue creada?</div>
+  <h2 class="section-title reveal">La <strong>razón social</strong><br>que nos dio vida</h2>
+  <div class="reason-grid">
+    <div class="reason-text reveal">
+      <p>En 2011, un grupo de juristas y empresarios internacionales identificó una brecha crítica en el sistema de comercio mundial: <strong>millones de PYMEs operaban en el mercado internacional sin ningún respaldo jurídico</strong> ante controversias transfronterizas.</p>
+      <p>Mientras las grandes corporaciones contaban con despachos especializados en Derecho Internacional Privado, las empresas medianas y emprendedores quedaban completamente expuestos a conflictos de leyes, incumplimientos contractuales y ejecuciones fallidas de sentencias en el extranjero.</p>
+      <p>Esta <strong>asimetría estructural</strong> motivó la creación de TRADELEX: una organización que actuara como puente entre el sistema jurídico internacional y las empresas que más lo necesitan, sin importar su tamaño o país de origen.</p>
+    </div>
+    <div class="prob-cards">
+      <div class="prob-card reveal">
+        <span class="prob-icon">⚠️</span>
+        <div><div class="prob-title">Vacío Jurídico Global</div><div class="prob-desc">Las PYMEs con operaciones transfronterizas carecían de orientación legal accesible en disputas internacionales.</div></div>
+      </div>
+      <div class="prob-card reveal">
+        <span class="prob-icon">📉</span>
+        <div><div class="prob-title">Pérdidas Millonarias</div><div class="prob-desc">Miles de empresas perdían contratos y activos por desconocer el derecho aplicable en jurisdicciones extranjeras.</div></div>
+      </div>
+      <div class="prob-card reveal">
+        <span class="prob-icon">⚖️</span>
+        <div><div class="prob-title">Asimetría de Justicia</div><div class="prob-desc">Las grandes firmas tenían despachos especializados; las pequeñas empresas quedaban completamente sin defensa.</div></div>
+      </div>
+      <div class="prob-card reveal">
+        <span class="prob-icon">🌍</span>
+        <div><div class="prob-title">Economías en Desarrollo</div><div class="prob-desc">Los marcos normativos de DIPr en países emergentes eran obsoletos e incompatibles con el comercio moderno.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISIÓN & VISIÓN -->
+<section style="background:var(--navy-mid);" id="mision">
+  <div class="section-label reveal">Identidad institucional</div>
+  <h2 class="section-title reveal">Misión <strong>&amp;</strong> Visión</h2>
+  <div class="mv-grid">
+    <div class="mv-card mv-card-mission reveal">
+      <span class="mv-tag">🎯 &nbsp; Misión</span>
+      <p class="mv-quote">"Proteger los derechos comerciales de empresas y emprendedores en el ámbito internacional, con acceso real e igualitario a la justicia."</p>
+      <p class="mv-body">Brindamos asesoría jurídica especializada en Derecho Internacional Privado, facilitamos la resolución de controversias transfronterizas y promovemos un entorno regulatorio equitativo y accesible a nivel global. Nuestra prioridad son las PYMEs y los mercados emergentes que más lo necesitan.</p>
+    </div>
+    <div class="mv-card mv-card-vision reveal">
+      <span class="mv-tag">🔭 &nbsp; Visión</span>
+      <p class="mv-quote">"Ser para 2040 la ONG líder mundial en defensa de los derechos comerciales internacionales, reconocida por la OMC, UNCITRAL y la CCI."</p>
+      <p class="mv-body">Aspiramos a una presencia activa en más de 80 países con una red de más de 1,000 juristas voluntarios certificados. Buscamos asesorar más de 50,000 empresas al año y ser el estándar global en justicia comercial accesible e igualitaria.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OBJETIVOS -->
+<section style="background:var(--navy);" id="objetivos">
+  <div class="section-label reveal">Propósito</div>
+  <h2 class="section-title reveal">Nuestros <strong>Objetivos</strong></h2>
+  <div class="obj-general reveal">
+    <div class="obj-general-label">Objetivo General</div>
+    <p class="obj-general-text">Garantizar el acceso igualitario de empresas al sistema jurídico internacional, promoviendo el cumplimiento del Derecho Internacional Privado y la resolución eficaz de controversias comerciales transfronterizas, reduciendo la brecha entre grandes corporaciones y PYMEs en el acceso a la justicia.</p>
+  </div>
+  <div class="obj-grid">
+    <div class="obj-card reveal"><span class="obj-num">01</span><span class="obj-icon">⚖️</span><div class="obj-title">Asesoría Legal Gratuita</div><p class="obj-desc">Orientación jurídica sin costo a PYMEs en contratos, arbitraje y disputas comerciales internacionales mediante plataforma digital y presencial.</p></div>
+    <div class="obj-card reveal"><span class="obj-num">02</span><span class="obj-icon">🎓</span><div class="obj-title">Capacitación Empresarial</div><p class="obj-desc">Talleres y diplomados sobre tratados clave: Convención de Viena, Principios UNIDROIT y Convención de La Haya sobre reconocimiento de sentencias.</p></div>
+    <div class="obj-card reveal"><span class="obj-num">03</span><span class="obj-icon">🌐</span><div class="obj-title">Red Global de Juristas</div><p class="obj-desc">Consolidar una red de más de 500 abogados voluntarios especializados en DIPr operando en más de 60 países a nivel mundial.</p></div>
+    <div class="obj-card reveal"><span class="obj-num">04</span><span class="obj-icon">📜</span><div class="obj-title">Reforma Normativa</div><p class="obj-desc">Impulsar actualizaciones legislativas en países en desarrollo para modernizar marcos normativos del Derecho Internacional Privado.</p></div>
+    <div class="obj-card reveal"><span class="obj-num">05</span><span class="obj-icon">📊</span><div class="obj-title">Investigación y Documentación</div><p class="obj-desc">Publicar reportes anuales sobre el estado del comercio internacional, jurisprudencia comparada y aplicación de tratados internacionales.</p></div>
+    <div class="obj-card reveal"><span class="obj-num">06</span><span class="obj-icon">🤝</span><div class="obj-title">Mediación Internacional</div><p class="obj-desc">Operar como mediador neutral en conflictos entre empresas de distintas jurisdicciones, evitando costosos procesos judiciales.</p></div>
+  </div>
+</section>
+
+<!-- FUNCIONAMIENTO -->
+<section style="background:var(--navy-mid);" id="funcionamiento">
+  <div class="section-label reveal">Operación</div>
+  <h2 class="section-title reveal">¿Cómo <strong>funcionamos</strong>?</h2>
+  <p class="section-body reveal">TRADELEX opera a través de tres pilares programáticos coordinados desde nuestra sede en Ginebra con cuatro oficinas regionales en cada continente.</p>
+  <div class="func-grid">
+    <div class="func-card reveal">
+      <span class="func-num">01</span>
+      <span class="func-icon">⚖️</span>
+      <div class="func-title">Centro de Asesoría Jurídica Internacional</div>
+      <p class="func-body">Plataforma digital y presencial donde juristas certificados atienden consultas sobre conflictos de leyes, jurisdicción competente, reconocimiento de sentencias y contratos internacionales en español, inglés, francés y árabe. Respuesta máxima en 72 horas.</p>
+      <span class="func-tag">CAJI · Sede Ginebra</span>
+    </div>
+    <div class="func-card reveal">
+      <span class="func-num">02</span>
+      <span class="func-icon">🎓</span>
+      <div class="func-title">Programa de Capacitación Internacional</div>
+      <p class="func-body">Talleres presenciales, webinars y diplomados gratuitos para empresarios, estudiantes y funcionarios. Módulos: arbitraje internacional, cláusulas de elección de foro, DIPr aplicado y resolución alternativa de controversias (RAC).</p>
+      <span class="func-tag">PCI · Global</span>
+    </div>
+    <div class="func-card reveal">
+      <span class="func-num">03</span>
+      <span class="func-icon">📚</span>
+      <div class="func-title">Centro de Documentación e Investigación</div>
+      <p class="func-body">Unidad académica que sistematiza legislación comparada, tratados internacionales y jurisprudencia global. Publica anualmente el Informe Global de DIPr Aplicado al Comercio (IGDIPAC), referencia para tribunales, universidades y organismos internacionales.</p>
+      <span class="func-tag">CDI · Publicaciones</span>
+    </div>
+  </div>
+</section>
+
+<!-- ESTRUCTURA -->
+<section style="background:var(--navy);" id="estructura">
+  <div class="section-label reveal">Gobierno corporativo</div>
+  <h2 class="section-title reveal">Estructura <strong>Organizacional</strong></h2>
+  <div class="struct-inner">
+    <div class="struct-chart reveal">
+      <div class="s-node s-top">Asamblea General de Miembros</div>
+      <div class="s-conn"></div>
+      <div class="s-node s-mid">Consejo Directivo (9 miembros)</div>
+      <div class="s-conn"></div>
+      <div class="s-node s-low">Dirección Ejecutiva — Ginebra</div>
+      <div class="s-branches">
+        <div class="s-branch">🌎 América<br><small style="opacity:.7;">Ciudad de México</small></div>
+        <div class="s-branch">🌍 África<br><small style="opacity:.7;">Nairobi</small></div>
+        <div class="s-branch">🕌 MENA<br><small style="opacity:.7;">Dubái</small></div>
+        <div class="s-branch">🌏 Asia-Pac<br><small style="opacity:.7;">Singapur</small></div>
+      </div>
+    </div>
+    <div class="info-rows reveal">
+      <div class="info-row"><span class="info-label">Registro Legal</span><span class="info-val">Art. 60 del Código Civil Suizo — Organización sin fines de lucro</span></div>
+      <div class="info-row"><span class="info-label">Sede Principal</span><span class="info-val">Ginebra, Suiza — Rue de la Paix 14, CH-1204</span></div>
+      <div class="info-row"><span class="info-label">Estatus ONU</span><span class="info-val">Organismo consultivo ante ECOSOC (Consejo Económico y Social)</span></div>
+      <div class="info-row"><span class="info-label">Idiomas Oficiales</span><span class="info-val">Español · Inglés · Francés · Árabe</span></div>
+      <div class="info-row"><span class="info-label">Consejo Directivo</span><span class="info-val">9 miembros electos cada 3 años en Asamblea General ordinaria</span></div>
+      <div class="info-row"><span class="info-label">Red de Juristas</span><span class="info-val">500+ abogados voluntarios certificados activos en 60+ países</span></div>
+      <div class="info-row"><span class="info-label">Fundación</span><span class="info-val">2011 por un consorcio de juristas y empresarios internacionales</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINANCIAMIENTO -->
+<section style="background:var(--navy-mid);" id="financiamiento">
+  <div class="section-label reveal">Sostenibilidad</div>
+  <h2 class="section-title reveal">Financiamiento <strong>Transparente</strong></h2>
+  <p class="section-body reveal">Como organización sin fines de lucro, TRADELEX se financia a través de fuentes diversificadas para garantizar independencia y sostenibilidad a largo plazo.</p>
+  <br><br>
+  <div class="fin-badge reveal">
+    <strong>✅ Sin Fines de Lucro:</strong>&nbsp; TRADELEX no distribuye utilidades. El 100% de los recursos se reinvierte en la misión institucional. El 85% del presupuesto va directamente a programas; solo el 15% a administración.
+  </div>
+  <div class="fin-grid">
+    <div class="fin-card reveal"><span class="fin-icon">🏛️</span><span class="fin-pct">30%</span><div class="fin-title">Organismos Internacionales</div><p class="fin-desc">UNCTAD, UNIDROIT, Banco Mundial y CCI financian proyectos mediante convocatorias competitivas anuales.</p></div>
+    <div class="fin-card reveal"><span class="fin-icon">🤝</span><span class="fin-pct">25%</span><div class="fin-title">Donaciones Privadas</div><p class="fin-desc">Fundaciones Open Society, Ford Foundation y GIZ (Alemania) aportan fondos para capacitación y asesoría.</p></div>
+    <div class="fin-card reveal"><span class="fin-icon">🎓</span><span class="fin-pct">20%</span><div class="fin-title">Convenios Universitarios</div><p class="fin-desc">UNAM, Sorbonne, LSE aportan recursos a cambio de acceso a investigaciones y bases de datos.</p></div>
+    <div class="fin-card reveal"><span class="fin-icon">💼</span><span class="fin-pct">15%</span><div class="fin-title">Membresías Corporativas</div><p class="fin-desc">Empresas que apoyan la causa y acceden a servicios premium pagan una cuota anual voluntaria.</p></div>
+    <div class="fin-card reveal"><span class="fin-icon">📊</span><span class="fin-pct">10%</span><div class="fin-title">Venta de Reportes</div><p class="fin-desc">Informes jurídicos especializados y bases de datos de jurisprudencia a despachos y gobiernos.</p></div>
+  </div>
+  <div class="fin-rules">
+    <div class="fin-rule reveal"><span class="fin-rule-dot">✦</span><p class="fin-rule-text"><strong style="color:var(--white)">Independencia garantizada:</strong> ningún donante puede aportar más del 20% del presupuesto total.</p></div>
+    <div class="fin-rule reveal"><span class="fin-rule-dot">✦</span><p class="fin-rule-text"><strong style="color:var(--white)">Auditoría anual</strong> por firma externa independiente, publicada en el sitio web institucional.</p></div>
+    <div class="fin-rule reveal"><span class="fin-rule-dot">✦</span><p class="fin-rule-text"><strong style="color:var(--white)">85% a programas:</strong> solo el 15% se destina a gastos administrativos y operativos.</p></div>
+    <div class="fin-rule reveal"><span class="fin-rule-dot">✦</span><p class="fin-rule-text"><strong style="color:var(--white)">Transparencia total:</strong> todos los gastos disponibles públicamente en informes trimestrales.</p></div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact-section" id="contacto">
+  <div class="contact-inner">
+    <div class="section-label reveal" style="justify-content:center;">Contáctanos</div>
+    <h2 class="section-title reveal" style="text-align:center;">¿Tu empresa necesita<br><strong>asesoría internacional</strong>?</h2>
+    <p style="font-size:1rem;color:var(--text-dim);line-height:1.8;margin-top:.5rem;" class="reveal">Nuestro equipo de juristas voluntarios está listo para orientarte sin costo. Escríbenos y te contactaremos en menos de 72 horas.</p>
+    <div class="contact-form reveal">
+      <input type="text" placeholder="Nombre completo">
+      <input type="email" placeholder="Correo electrónico">
+      <input type="text" placeholder="País y tipo de empresa">
+      <textarea rows="4" placeholder="Describe brevemente tu situación jurídica..."></textarea>
+      <button class="btn-primary" style="border:none;cursor:pointer;width:100%;">Solicitar asesoría gratuita</button>
+    </div>
+    <div class="contact-info reveal">
+      <div class="c-info-block"><div class="c-info-label">Sede principal</div><div class="c-info-val">Rue de la Paix 14, Ginebra, Suiza</div></div>
+      <div class="c-info-block"><div class="c-info-label">Email</div><div class="c-info-val">info@tradelex.org</div></div>
+      <div class="c-info-block"><div class="c-info-label">Respuesta</div><div class="c-info-val">Máximo 72 horas</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <svg viewBox="0 0 240 76" width="190" height="60" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
+        <defs>
+          <linearGradient id="fg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E8D49A"/><stop offset="50%" style="stop-color:#C9A84C"/><stop offset="100%" style="stop-color:#8C7235"/></linearGradient>
+        </defs>
+        <polygon points="38,4 64,19 64,49 38,64 12,49 12,19" fill="#0F1629" stroke="url(#fg1)" stroke-width="1.8" opacity=".7"/>
+        <ellipse cx="38" cy="34" rx="18" ry="18" fill="none" stroke="url(#fg1)" stroke-width=".9" opacity=".35"/>
+        <ellipse cx="38" cy="34" rx="9" ry="18" fill="none" stroke="url(#fg1)" stroke-width=".9" opacity=".55"/>
+        <line x1="20" y1="34" x2="56" y2="34" stroke="url(#fg1)" stroke-width=".9" opacity=".55"/>
+        <line x1="38" y1="16" x2="38" y2="52" stroke="url(#fg1)" stroke-width=".8" opacity=".42"/>
+        <line x1="38" y1="26" x2="38" y2="46" stroke="url(#fg1)" stroke-width="2"/>
+        <line x1="28" y1="31" x2="48" y2="31" stroke="url(#fg1)" stroke-width="1.8"/>
+        <line x1="38" y1="31" x2="28" y2="38" stroke="url(#fg1)" stroke-width="1.6"/>
+        <line x1="38" y1="31" x2="48" y2="38" stroke="url(#fg1)" stroke-width="1.6"/>
+        <path d="M22,38 Q28,44 34,38" fill="none" stroke="url(#fg1)" stroke-width="1.6"/>
+        <path d="M42,38 Q48,44 54,38" fill="none" stroke="url(#fg1)" stroke-width="1.6"/>
+        <line x1="33" y1="46" x2="43" y2="46" stroke="url(#fg1)" stroke-width="1.8"/>
+        <text x="78" y="42" font-family="Georgia,serif" font-size="26" font-weight="bold" letter-spacing="3" fill="url(#fg1)">TRADE<tspan fill="#F5F3EE" font-weight="300">LEX</tspan></text>
+      </svg>
+      <p class="footer-desc">ONG Internacional dedicada a la protección de los derechos comerciales en el ámbito del Derecho Internacional Privado. Sin fines de lucro desde 2011.</p>
+      <span class="footer-legal">Est. 2011 · Ginebra, Suiza</span>
+    </div>
+    <div>
+      <div class="footer-col-title">Organización</div>
+      <ul class="footer-links">
+        <li><a href="#razon">Razón Social</a></li>
+        <li><a href="#mision">Misión & Visión</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#funcionamiento">Funcionamiento</a></li>
+        <li><a href="#estructura">Estructura</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Servicios</div>
+      <ul class="footer-links">
+        <li><a href="#contacto">Asesoría Jurídica (CAJI)</a></li>
+        <li><a href="#funcionamiento">Capacitación (PCI)</a></li>
+        <li><a href="#funcionamiento">Investigación (CDI)</a></li>
+        <li><a href="#contacto">Mediación Internacional</a></li>
+        <li><a href="#financiamiento">Transparencia</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Oficinas Regionales</div>
+      <ul class="footer-links">
+        <li><a href="#">🏛️ Ginebra (Sede Central)</a></li>
+        <li><a href="#">🌎 Ciudad de México</a></li>
+        <li><a href="#">🌍 Nairobi</a></li>
+        <li><a href="#">🕌 Dubái</a></li>
+        <li><a href="#">🌏 Singapur</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 <span>TRADELEX</span> — Global Trade Rights & Business Protection. Todos los derechos reservados.</p>
+    <p class="footer-copy">Organización sin fines de lucro · Código Civil Suizo Art. 60 · Estatus consultivo <span>ECOSOC / ONU</span></p>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  el.style.transitionDelay = (i % 5) * 0.07 + 's';
+  obs.observe(el);
+});
+
+window.addEventListener('scroll', () => {
+  const ids = ['inicio','razon','mision','objetivos','funcionamiento','estructura','financiamiento','contacto'];
+  let current = '';
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && window.scrollY >= el.offsetTop - 100) current = id;
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    const href = a.getAttribute('href');
+    a.style.color = href === '#' + current ? 'var(--gold)' : '';
+  });
+});
+</script>
+</body>
+</html>
